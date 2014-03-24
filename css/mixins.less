@@ -1,0 +1,40 @@
+// @mixins
+// unless otherwise noted, these came from Twitter Bootstrap
+
+// Box sizing
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+		 -moz-box-sizing: @boxmodel;
+					box-sizing: @boxmodel;
+}
+
+// Drop shadows
+//
+// Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
+//   supported browsers that have box shadow capabilities now support the
+//   standard `box-shadow` property.
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
+}
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//		contenteditable attribute is included anywhere else in the document.
+//		Otherwise it causes space to appear at the top and bottom of elements
+//		that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//		`:before` to contain the top-margins of child elements.
+.clearfix() {
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+	}
+	&:after {
+		clear: both;
+	}
+}

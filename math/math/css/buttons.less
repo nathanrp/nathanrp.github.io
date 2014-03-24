@@ -1,0 +1,31 @@
+// buttons
+
+* {
+	&:focus {
+		-moz-outline-style: none;
+	}
+	&:active {
+		outline: 0;
+	}
+	&::-moz-focus-inner {
+		border: 0;
+	}
+}
+
+button, .btn {
+	#gradient > .vertical-three-colors(@startColor: darken(@white,0%), @startColorStop: 50%, @midColor: darken(@white,7%), @midColorStop: 50%, @endColor: darken(@white,5%), @endColorStop: 100%);
+	border-width: 2px;
+	border-style: solid;
+	border-color: darken(@white,15%) darken(@white,25%) darken(@white,30%) darken(@white,20%);
+	.border-radius(10px);
+	font-family: @font;
+	font-size: 24px;
+	padding: 10px 30px;
+	color: lighten(@black,30%);
+	display: inline-block;
+	&:hover {
+		color: @color;
+		border-color: darken(@white,15%) darken(@white,30%) darken(@white,40%) darken(@white,20%);
+		#gradient > .vertical-three-colors(@startColor: darken(@white,0%), @startColorStop: 50%, @midColor: darken(@white,10%), @midColorStop: 50%, @endColor: darken(@white,5%), @endColorStop: 100%);
+	}	
+}
