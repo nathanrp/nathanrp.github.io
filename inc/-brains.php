@@ -3,7 +3,7 @@
 <meta name="keywords" content="UX, Interaction design, user-experience, usability, interface design, ui, prototyping, mobile, design, web design, HTML, CSS, Javascript, wireframes, accessibility, icons"/>
 
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=0, maximum-scale=1, minimum-scale=1.0, maximum-scale=1.0" media="(device-height: 568px)" />
 
 <title>Nathan Philpot, Design is Honest</title>
@@ -22,5 +22,6 @@
 <script src="<?php echo $path;?>js/less.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
 <script src="<?php echo $path;?>js/retina.min.js" type="text/javascript"></script>
 <script src="<?php echo $path;?>js/jquery.nospam.js" type="text/javascript"></script>
+<script src="<?php echo $path;?>js/owl.carousel.min.js" type="text/javascript"></script>
 
 <script src="<?php echo $path;?>js/scripts.js" type="text/javascript"></script>

@@ -6,10 +6,12 @@
 @import "mixins.less";
 @import "retina.less";
 @import "vars.less";
+@import "owl/owl.carousel.css";
 
 * {
 	.box-sizing(border-box);
 }
+
 
 body {
 	font-family: @fserif;
@@ -83,7 +85,7 @@ dl {
 
 .page {
 	padding: 113px 19px;
-	max-width: 503px;
+	max-width: @container;
 	margin: 0 auto;
 }
 
@@ -100,6 +102,14 @@ dl {
 	img {
 		display: block;
 		width: 100%;
+	}
+}
+
+.work {
+	width: @work;
+	margin: 0 -((@work - @container) / 2);
+	img {
+		max-width: 100%;
 	}
 }
 

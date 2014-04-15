@@ -20,6 +20,15 @@ $path = '';
 		<p>When designing a product I look for <a href="http://www.sce.carleton.ca/faculty/tanev/TTMG_5103/Articles/Christensen_Finding_the_right_job_for_your_product_MIT_Sloan_2007.pdf">jobs to be done</a>. I prefer prototyping over documentation, frequent interaction with development and product teams over large meetings. I think user feedback should <a href="https://medium.com/bringing-the-donuts/1818bb8c6ca8">inform product lists</a>.</p>
 		<p>I believe design is honest.</p>
 		<p>For samples of my work or to just say hi, <a class="email" rel="moc/liamg@toplihpnahtan">email me</a>.</p>
+		<h2>Work</h2>
+		<div class="work">
+			<div class="item">
+				<img class="lazyOwl" data-src="<?php echo $path;?>img/1.jpg" alt="Screenshot">
+			</div>
+			<div class="item">
+				<img class="lazyOwl" data-src="<?php echo $path;?>img/2.jpg" alt="Screenshot">
+			</div>
+		</div>
 		<ul class="social">
 			<li><a href="https://www.linkedin.com/in/nathanphilpot" class="icon-linkedin"></a></li>
 			<li><a href="https://medium.com/@nathanphilpot" class="medium"><?php include($path.'css/img/m.svg'); ?></a></li>
