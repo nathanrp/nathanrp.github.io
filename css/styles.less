@@ -105,11 +105,35 @@ dl {
 	}
 }
 
-.work {
-	width: @work;
-	margin: 0 -((@work - @container) / 2);
-	img {
+.works {
+	padding: 0 0 113px;
+	.row {
+		.clearfix();
+		.work {
+			float: left;
+			position: relative;
+			width: 45%;
+			margin: 0 10% 23px 0;
+			span {
+				display: block;
+				font-size: 15px;
+				padding: 0 5px;
+			}
+			&:nth-child(2) {
+				margin-right: 0;
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.samples {
+	padding: 0 0 113px;
+	.sample {
 		max-width: 100%;
+		margin: 0 0 47px;
 	}
 }
 
