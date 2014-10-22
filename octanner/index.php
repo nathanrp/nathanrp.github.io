@@ -13,22 +13,21 @@ $path = '../';
 </head>
 <body>
 
-	<div class="page">
-		<h1>Welcome, Ellucian</h1>
-		<p>Here is a brief sample of my work, enjoy.</p>
+	<div class="page imgs">
+		<div class="container">
+			<h1>Welcome, <abbr>O.C.</abbr> Tanner</h1>
+			<p>Here is a brief sample of my work, enjoy.</p>
+		</div>
 		<div class="works">
-			<div class="row">
-				<a href="<?php echo $path;?>work/screentime.php" class="work">
-					<img src="<?php echo $path;?>img/screentime2@0.5x.png" alt="Screenshot" />
-					<span>Screen Time</span>
-				</a>
-				<a href="<?php echo $path;?>work/wgu.php" class="work">
-					<img src="<?php echo $path;?>img/wgu@0.5x.png" alt="Screenshot" />
-					<span>WGU</span>
-				</a>
+			<div class="work">
+				<h2><abbr>WGU</abbr></h2>
+				<p><abbr>WGU</abbr> is an online, competency-based university.</p>
+				<picture>
+					<img src="<?php echo $path;?>img/wgu.jpg" alt="Screenshot" />
+				</picture>
 			</div>
 		</div>
-		<footer>
+		<footer class="container">
 			<p>&copy; 2014 Nathan Philpot, Inc.</p>
 			<p>This site was made with <a href="http://www.wolframalpha.com/share/clip?f=d41d8cd98f00b204e9800998ecf8427e2dsvrfghkk">prime numbers</a>.</p>
 		</footer>

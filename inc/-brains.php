@@ -3,8 +3,7 @@
 <meta name="keywords" content="UX, Interaction design, user-experience, usability, interface design, ui, prototyping, mobile, design, web design, HTML, CSS, Javascript, wireframes, accessibility, icons"/>
 
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
-<meta name="viewport" content="initial-scale=1.0, user-scalable=0, maximum-scale=1, minimum-scale=1.0, maximum-scale=1.0" media="(device-height: 568px)" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Nathan Philpot, Design is Honest</title>
 

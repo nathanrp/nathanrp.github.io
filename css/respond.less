@@ -11,24 +11,15 @@
 		font-size: 36px;
 		text-align: left;
 	}
-
-	@ws: 733px;
-	@wsw: percentage(200/@ws);
+	
+	h2 {
+		font-size: 28px;
+	}
 
 	.works {
-		width: @ws;
-		margin: 0 -((@ws - @container) / 2);
-		.row {
-			.work {
-				max-width: @wsw;
-				margin: 0 ((percentage(1)-(@wsw*3))/2) 0 0;
-				&:nth-child(2) {
-					margin-right: ((percentage(1)-(@wsw*3))/2);
-				}
-				&:nth-child(3) {
-					margin-right: 0;
-				}
-			}
+		.work {
+			margin-bottom: 67px;
+			padding: 67px 0;
 		}
 	}
 

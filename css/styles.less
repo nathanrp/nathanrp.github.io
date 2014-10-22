@@ -40,6 +40,13 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.4em;
+	padding: 0 0 1em;
+}
+
 p {
 	padding: 0 0 1.4em;
 	line-height: 1.75em;
@@ -87,6 +94,13 @@ dl {
 	padding: 113px 19px;
 	max-width: @container;
 	margin: 0 auto;
+	&.imgs {
+		max-width: none;
+	}
+	.container {
+		max-width: @container;
+		margin: 0 auto;
+	}
 }
 
 .avatar {
@@ -107,24 +121,20 @@ dl {
 
 .works {
 	padding: 0 0 113px;
-	.row {
-		.clearfix();
-		.work {
-			float: left;
-			position: relative;
-			width: 45%;
-			margin: 0 10% 23px 0;
-			span {
-				display: block;
-				font-size: 15px;
-				padding: 0 5px;
-			}
-			&:nth-child(2) {
-				margin-right: 0;
-			}
+	.work {
+		max-width: 1193px;
+		margin: 0 auto 31px;
+		padding: 31px 0;
+		h2, p {
+			max-width: @container;
+			margin: 0 auto;
 		}
-		img {
-			max-width: 100%;
+		picture {
+			margin: 0 -19px;
+			display: block;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }
