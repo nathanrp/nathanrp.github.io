@@ -20,10 +20,17 @@ $path = '../';
 		</div>
 		<div class="works">
 			<div class="work">
+				<p ><a href="https://itunes.apple.com/us/app/wgu-mobile/id730640860"><img src="<?php echo $path;?>img/wgu-app-icon.png" alt="WGU app icon" class="app-icon" /></a></p>
 				<h2><abbr>WGU</abbr></h2>
 				<p><abbr>UX</abbr> and <abbr>UI</abbr> design for <abbr>WGU</abbr>&rsquo;s iOS and Android apps. <abbr>WGU</abbr> is an online, competency-based university. <abbr>WGU</abbr> has over 50,000 students and they need to be able to study and get stuff done whenever, wherever.</p>
 				<picture>
 					<img src="<?php echo $path;?>img/wgu.jpg" alt="Screenshot" />
+				</picture>
+				<p>Check it out in the <a href="https://itunes.apple.com/us/app/wgu-mobile/id730640860">App Store</a> or <a href="https://play.google.com/store/apps/details?id=edu.wgu.students.mywgu&hl=en">Google play</a>.</p>
+				<hr/>
+				<h2>Caregiver Window</h2>
+				<picture>
+					<img src="<?php echo $path;?>img/cgw.jpg" alt="Screenshot" />
 				</picture>
 			</div>
 		</div>
