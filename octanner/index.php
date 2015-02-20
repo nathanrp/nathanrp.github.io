@@ -21,7 +21,7 @@ $path = '../';
 		<div class="works">
 			<div class="work">
 				<h2><abbr>WGU</abbr></h2>
-				<p><abbr>WGU</abbr> is an online, competency-based university.</p>
+				<p><abbr>UX</abbr> and <abbr>UI</abbr> design for <abbr>WGU</abbr>&rsquo;s iOS and Android apps. <abbr>WGU</abbr> is an online, competency-based university. <abbr>WGU</abbr> has over 50,000 students and they need to be able to study and get stuff done whenever, wherever.</p>
 				<picture>
 					<img src="<?php echo $path;?>img/wgu.jpg" alt="Screenshot" />
 				</picture>
