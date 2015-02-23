@@ -15,7 +15,7 @@ $path = '../';
 
 	<div class="page imgs">
 		<div class="container">
-			<h1>Welcome, <abbr>O.C.</abbr> Tanner</h1>
+			<h1>Welcome, Pluralsight</h1>
 			<p>Here is a brief sample of my work, enjoy.</p>
 		</div>
 		<div class="works">
@@ -35,7 +35,7 @@ $path = '../';
 				</picture>
 				<hr/>
 				<h2>H&amp;R Block</h2>
-				<p>Working as a <abbr>UX</abbr> designer creating the future of tax software. Lead designer on the flagship assisted tax product,
+				<p><abbr>UX</abbr> design creating the future of tax software. Lead designer on the flagship assisted tax product,
 a channel for billions of dollars in revenue.</p>
 				<picture>
 					<img src="<?php echo $path;?>img/hrb1.jpg" alt="Screenshot" />
