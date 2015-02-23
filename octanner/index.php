@@ -20,7 +20,7 @@ $path = '../';
 		</div>
 		<div class="works">
 			<div class="work">
-				<p ><a href="https://itunes.apple.com/us/app/wgu-mobile/id730640860"><img src="<?php echo $path;?>img/wgu-app-icon.png" alt="WGU app icon" class="app-icon" /></a></p>
+				<p><a href="https://itunes.apple.com/us/app/wgu-mobile/id730640860"><img src="<?php echo $path;?>img/wgu-app-icon.png" alt="WGU app icon" class="app-icon" /></a></p>
 				<h2><abbr>WGU</abbr></h2>
 				<p><abbr>UX</abbr> and <abbr>UI</abbr> design for <abbr>WGU</abbr>&rsquo;s iOS and Android apps. <abbr>WGU</abbr> is an online, competency-based university. <abbr>WGU</abbr> has over 50,000 students and they need to be able to study and get stuff done whenever, wherever.</p>
 				<picture>
@@ -29,9 +29,28 @@ $path = '../';
 				<p>Check it out in the <a href="https://itunes.apple.com/us/app/wgu-mobile/id730640860">App Store</a> or <a href="https://play.google.com/store/apps/details?id=edu.wgu.students.mywgu&hl=en">Google play</a>.</p>
 				<hr/>
 				<h2>Caregiver Window</h2>
+				<p>Caregiver Window is the most user-friendly private-duty software available today. <a href="http://caregiverwindow.com/">Check it out.</a></p>
 				<picture>
 					<img src="<?php echo $path;?>img/cgw.jpg" alt="Screenshot" />
 				</picture>
+				<hr/>
+				<h2>H&amp;R Block</h2>
+				<p>Working as a <abbr>UX</abbr> designer creating the future of tax software. Lead designer on the flagship assisted tax product,
+a channel for billions of dollars in revenue.</p>
+				<picture>
+					<img src="<?php echo $path;?>img/hrb1.jpg" alt="Screenshot" />
+				</picture>
+				<picture>
+					<img src="<?php echo $path;?>img/hrb.jpg" alt="Screenshot" />
+				</picture>
+				<hr/>
+				<p><a href="https://itunes.apple.com/us/app/screen-time-media-time-manager/id412387263"><img src="<?php echo $path;?>img/scr-app-icon.png" alt="Screentime app icon" class="app-icon" /></a></p>
+				<h2>Screen Time</h2>
+				<p>Track, earn, and encourage. Better media interaction for your kids.</p>
+				<picture>
+					<img src="<?php echo $path;?>img/scr.jpg" alt="Screenshot" />
+				</picture>
+				<p><a href="http://screentimeapp.com/">Available on the App Store.</a></p>
 			</div>
 		</div>
 		<footer class="container">
