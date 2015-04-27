@@ -1,0 +1,114 @@
+/* @styles */
+
+@import "reset.css";
+
+@import "mixins.less";
+@import "vars.less";
+
+* {
+	.box-sizing(border-box);
+}
+
+
+body {
+	font-family: @fserif;
+	font-size: 17px;
+	color: @color;
+	line-height: 31/17em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background: darken(@white,1%);
+}
+
+a {
+	color: @cyan;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		.box-shadow(0 2px 0 @cyan);
+	}
+}
+
+h1 {
+	a {
+		color: @color;
+		&:hover {
+			color: @cyan;
+		}
+	}
+}
+
+h3 {
+	font-weight: 600;
+}
+
+p {
+	padding: 0 0 1em;
+}
+
+i {
+	font-style: italic;
+}
+
+abbr {
+	font-variant: small-caps;
+	letter-spacing: .05em;
+	font-size: .95em;
+}
+
+.page {
+	padding: 113px 19px 113px 19px;
+	max-width: @container;
+	margin: 0 auto;
+	.container {
+		max-width: @container;
+		margin: 0 auto;
+	}
+}
+
+.imgs {
+	padding: 19px 0 57px;
+	margin: 0 -19px;
+	img {
+		max-width: 100%;
+		display: block;
+	}
+	.caption {
+		font-family: @fsans;
+		font-size: 16px;
+		text-align: center;
+		color: lighten(@color, 33%);
+	}
+}
+
+.nav {
+	padding: 0 0 19px;
+	a {
+		display: inline-block;
+		padding: 0 2px 0 0;
+		&:after {
+			content: ',';
+		}
+		&:last-child {
+			&:after {
+				content: '';
+			}
+		}
+	}
+}
+
+footer {
+	color: lighten(@color, 50%);
+	font-family: @fsans;
+	font-size: 15px;
+	line-height: 1.4em;
+	padding: 113px 0;
+	a {
+		color: lighten(@color, 50%);
+		&:hover {
+			color: @cyan;
+		}
+	}
+}
+
+@import "respond.less";

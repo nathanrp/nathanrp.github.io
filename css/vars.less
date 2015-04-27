@@ -1,7 +1,7 @@
 // variables
 
-@fserif: 'Karla', sans-serif;
-@fsans: 'Merriweather Sans', sans-serif;
+@fserif: 'Merriweather', serif;
+@fsans: 'Merriweather-Sans', sans-serif;
 @dsans: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Geneva, Verdana, sans-serif;
 
 @black: #000;
@@ -11,24 +11,9 @@
 @rand2: @white;
 @cyan: #09f;
 @brand: #f90;
+@baby: #b4e7f4;
 
-@container: 503px; 
-@work: 733px;
-
-// Container sizes
-// --------------------------------------------------
-
-// Small screen / tablet
-@container-sm:             ((720px + @grid-gutter-width));
-
-// Medium screen / desktop
-@container-md:            ((701px + @grid-gutter-width));
-
-// Large screen / wide desktop
-@container-lg:      ((1213px + @grid-gutter-width));
-
-// Media queries breakpoints
-// --------------------------------------------------
+@container: 571px;
 
 // Extra small screen / phone
 // Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
@@ -45,24 +30,3 @@
 // Large screen / wide desktop
 // Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
 @screen-lg-min:              1213px;
-
-// So media queries don't overlap when required, provide a maximum
-@screen-xs-max:              (@screen-sm-min - 1);
-@screen-sm-max:              (@screen-md-min - 1);
-@screen-md-max:              (@screen-lg-min - 1);
-
-
-// Grid system
-// --------------------------------------------------
-
-// Number of columns in the grid system
-@grid-columns:              12;
-// Padding, to be divided by two and applied to the left and right of all columns
-@grid-gutter-width:         31px;
-
-// Navbar collapse
-
-// Point at which the navbar becomes uncollapsed
-@grid-float-breakpoint:     @screen-sm-min;
-// Point at which the navbar begins collapsing
-@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
