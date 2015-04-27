@@ -23,7 +23,7 @@ $path = '../';
 			<img src="<?php echo $path;?>img/wgu-1.jpg" alt="User Story Mapping" />
 			<figcaption class="caption">User storing mapping with the team.</figcaption>
 		</figure>
-		<p>But first, let me talk about the current student portal. The portal is what they call the system the student logs into and has access to their courses and some administrative features around being a student at <abbr>WGU</abbr>.</p>
+		<p>But first, let me talk about the current student portal. The portal is the system the student logs into and has access to their courses and some administrative features around being a student at <abbr>WGU</abbr>.</p>
 		<figure class="imgs">
 			<img src="<?php echo $path;?>img/wgu-1.jpg" alt="User Story Mapping" />
 			<figcaption class="caption">User storing mapping with the team.</figcaption>
