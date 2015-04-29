@@ -17,7 +17,6 @@ $page = 2;
 
 	<div class="page">
 		<?php include($path.'inc/-nav.php');?>
-		<?php include($path.'work/-nav.php');?>
 		<h3><abbr>WGU</abbr></h3>
 		<p>Western Governors University (<abbr>WGU</abbr>) is a non-profit online university offering a convenient, flexible online education. WGU is the only accredited university in the U.S. offering competency-based, online degrees.</p>
 		<p>My first project here was to help them with there mobile products. They had an existing &lsquo;<abbr>MVP</abbr>&rsquo; app, (Yes, those are air quotes around <abbr>MVP</abbr>). The <abbr>MVP</abbr> app was throw away, students didn&rsquo;t like it and it was basically a native app pointing them to webviews of what they wanted to get done.</p>
@@ -38,10 +37,10 @@ $page = 2;
 			<img src="<?php echo $path;?>img/wgu-2.jpg" alt="Telling the story" />
 			<figcaption class="caption">Sharing understanding with a member of the the Dev Team.</figcaption>
 		</figure>
-		<p>As we tested and learned more the design changed.</p>
+		<p>As we tested and learned more, the design changed.</p>
 		<figure class="imgs">
 			<img src="<?php echo $path;?>img/wgu-5.jpg" alt="Telling the story" />
-			<figcaption class="caption">Design evoluation.</figcaption>
+			<figcaption class="caption">Design evolution.</figcaption>
 		</figure>
 		<figure class="imgs">
 			<img src="<?php echo $path;?>img/wgu-6.png" alt="Icons" />
@@ -55,7 +54,7 @@ $page = 2;
 			<img src="<?php echo $path;?>img/wgu-8.jpg" alt="Icons" />
 			<figcaption class="caption">Behold, the <abbr>WGU</abbr> app.</figcaption>
 		</figure>
-		<p>This is only the beginning. <abbr>UX</abbr> is helping everyone in the organization understand how to design the right product or experience.</p>
+		<p>This is only the beginning. <abbr>UX</abbr> is helping everyone in the organization understand how to continue to design the right product and experience.</p>
 		<figure class="imgs">
 			<img src="<?php echo $path;?>img/wgu-1.jpg" alt="Icons" />
 			<figcaption class="caption">Design the right product by mapping the complete experience.</figcaption>
