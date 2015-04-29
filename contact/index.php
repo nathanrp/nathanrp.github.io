@@ -2,6 +2,8 @@
 
 $path = '../';
 
+$page = 3;
+
 ?>
 
 <!DOCTYPE html>
