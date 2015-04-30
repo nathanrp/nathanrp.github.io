@@ -65,6 +65,8 @@ abbr {
   font-size: 16px;
   text-align: center;
   color: #8f8f8f;
+  line-height: 1.2em;
+  padding: 13px 19px 0;
 }
 .nav {
   padding: 0 0 19px;
