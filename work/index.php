@@ -2,7 +2,7 @@
 
 $path = '../';
 
-$page = 2;
+$page = 2.1;
 
 ?>
 
@@ -17,6 +17,7 @@ $page = 2;
 
 	<div class="page">
 		<?php include($path.'inc/-nav.php');?>
+		<?php include($path.'work/-nav.php');?>
 		<h3><abbr>WGU</abbr></h3>
 		<p>Western Governors University (<abbr>WGU</abbr>) is a non-profit online university offering a convenient, flexible online education. WGU is the only accredited university in the U.S. offering competency-based, online degrees.</p>
 		<p>My first project here was to help them with there mobile products. They had an existing &lsquo;<abbr>MVP</abbr>&rsquo; app, (Yes, those are air quotes around <abbr>MVP</abbr>). The <abbr>MVP</abbr> app was throw away, students didn&rsquo;t like it and it was basically a native app pointing them to webviews of what they wanted to get done.</p>
