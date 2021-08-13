@@ -4,6 +4,7 @@
 
 :root {
   --black: #040404;
+  --gray: #787878;
   --ltgray: #fbfbfb;
   --teal: #00ffcb;
   --blue: #0085ff;
@@ -58,6 +59,12 @@ nav li.logo img {
   max-width: 100%;
   width: 99px;
   display: block;
+}
+
+nav .meta {
+  padding: 33px 0;
+  font-size: 13px;
+  color: var(--gray);
 }
 
 .content {
