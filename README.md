@@ -1,4 +1,1 @@
-nathanphilpot.com
-=================
-
-My website
+Coming soon.
