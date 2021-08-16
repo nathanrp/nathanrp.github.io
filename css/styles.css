@@ -3,9 +3,10 @@
 @import "reset.css";
 
 :root {
-  --black: #16161d;
-  --gray: #818185;
-  --ltgray: #fbfbfb;
+  --eigengrau: 22,22,29;
+  --black: rgba(var(--eigengrau));
+  --gray: rgba(var(--black), 0.54);
+  --ltgray: rgba(var(--black), 0.03);
   --teal: #00ffcb;
   --blue: #0085ff;
 }
