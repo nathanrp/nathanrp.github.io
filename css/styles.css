@@ -9,6 +9,7 @@
   --ltgray: rgba(var(--eigengrau), 0.03);
   --teal: #00ffcb;
   --blue: #0085ff;
+  --reading: 16px;
 }
 
 body {
@@ -113,4 +114,25 @@ nav .meta {
     width: calc((100% - 66px)/2);
   }
 
+}
+
+.hero {
+  border-radius: 4px;
+}
+
+.reading {
+  max-width: 640px;
+  margin: calc(var(--reading)*3) auto;
+}
+
+h1 {
+  font-size: calc(var(--reading)*5);
+  font-weight: 800;
+  line-height: calc((var(--reading)*5)*1.52);
+}
+
+.reading p {
+  font-size: var(--reading);
+  line-height: calc(var(--reading)*1.52);
+  margin: 0 0 var(--reading);
 }
