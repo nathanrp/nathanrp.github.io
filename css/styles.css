@@ -42,6 +42,11 @@ a:hover {
   text-decoration: underline;
 }
 
+abbr {
+  font-size: .96em;
+  letter-spacing: 1px;
+}
+
 .page {
   max-width: 100%;
   margin: auto;
