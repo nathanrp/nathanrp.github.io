@@ -2,18 +2,30 @@
 
 @import "reset.css";
 
+@font-face {
+  font-family: 'Baewatch';
+  src: url('BaewatchRegular.woff2') format('woff2'),
+      url('BaewatchRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --eigengrau: 22,22,29;
   --black: rgba(var(--eigengrau));
   --gray: rgba(var(--eigengrau), 0.54);
-  --ltgray: rgba(var(--eigengrau), 0.03);
+  --ltgray: rgba(var(--eigengrau), 0.38);
+  --ltrgray: rgba(var(--eigengrau), 0.03);
   --teal: #00ffcb;
   --blue: #0085ff;
   --reading: 16px;
+  --fontstack: -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --displaystack: 'Baewatch';
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: var(--fontstack);
   font-size: 14px;
   text-rendering: optimizeLegibility;
   color: var(--black);
@@ -74,6 +86,14 @@ nav .meta {
   width: 100%;
 }
 
+figure figcaption {
+  font-size: 12px;
+  color: var(--ltgray);
+  padding: var(--reading) 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -86,11 +106,30 @@ nav .meta {
   min-width: 200px;
 }
 
-.portfolio figure img {
+.portfolio figure img, .use-case figure img {
   display: block;
   width: 100%;
-  background: var(--ltgray);
   border-radius: 4px;
+}
+
+.use-case figure.detail {
+  padding: calc(var(--reading)*8) 0;
+}
+
+.use-case figure.detail img {
+  border-radius: 4px;
+  position: relative;
+}
+
+.use-case figure.detail img::after {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 3px inset rgba(var(--eigengrau), 0.03);
+  content: '';
 }
 
 @media screen and (max-width: 768px) {
@@ -116,19 +155,28 @@ nav .meta {
 
 }
 
-.hero {
-  border-radius: 4px;
-}
-
 .reading {
   max-width: 640px;
   margin: calc(var(--reading)*3) auto;
 }
 
 h1 {
+  font-family: var(--displaystack);
   font-size: calc(var(--reading)*5);
   font-weight: 800;
   line-height: calc((var(--reading)*5)*1.52);
+}
+
+.logo a {
+  font-family: var(--displaystack);
+  font-size: calc(var(--reading)*3);
+  line-height: calc((var(--reading)*3)*1.52);
+  color: rgba(var(--black));
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: var(--blue);
 }
 
 .reading p {
