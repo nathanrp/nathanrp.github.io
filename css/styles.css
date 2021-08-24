@@ -19,14 +19,16 @@
   --ltrgray: rgba(var(--eigengrau), 0.03);
   --teal: #00ffcb;
   --blue: #0085ff;
+  --yellow: #fbff44;
   --reading: 16px;
+  --body: 14px;
   --fontstack: -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --displaystack: 'Baewatch';
 }
 
 body {
   font-family: var(--fontstack);
-  font-size: 14px;
+  font-size: var(--body);
   text-rendering: optimizeLegibility;
   color: var(--black);
 }
@@ -100,7 +102,7 @@ figure figcaption {
   gap: 33px;
 }
 
-.portfolio figure {
+.portfolio figure, .portfolio .under-construction {
   width: calc((100% - 99px)/4);
   max-width: 320px;
   min-width: 200px;
@@ -179,8 +181,20 @@ h1 {
   color: var(--blue);
 }
 
-.reading p {
+.reading p, .under-construction p {
   font-size: var(--reading);
   line-height: calc(var(--reading)*1.52);
   margin: 0 0 var(--reading);
+}
+
+.under-construction {
+  background: var(--ltrgray);
+  color: var(--ltgray);
+  padding: calc(var(--body)*3);
+  border-radius: 4px;
+}
+
+em {
+  font-family: var(--displaystack);
+  font-size: calc(var(--reading)*1.52);
 }
