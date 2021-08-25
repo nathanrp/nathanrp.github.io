@@ -107,7 +107,7 @@ figure figcaption {
   gap: 33px;
 }
 
-.portfolio figure, .portfolio .under-construction {
+.portfolio figure {
   width: calc((100% - 99px)/4);
   max-width: 320px;
   min-width: 200px;
@@ -170,10 +170,10 @@ h1 {
 }
 
 .under-construction {
-  background: var(--ltrgray);
   color: var(--ltgray);
-  padding: calc(var(--body)*3);
+  padding: calc(var(--body)*3) 0;
   border-radius: 4px;
+  width: 100%;
 }
 
 em {
