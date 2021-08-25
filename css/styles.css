@@ -139,29 +139,6 @@ figure figcaption {
   content: '';
 }
 
-@media screen and (max-width: 768px) {
-
-  .page {
-    flex-direction: column;
-    padding: 44px;
-    align-items: center;
-  }
-
-  nav {
-    padding-bottom: 33px;
-    text-align: center;
-  }
-
-  .portfolio {
-    justify-content: center;
-  }
-
-  .portfolio figure {
-    width: calc((100% - 66px)/2);
-  }
-
-}
-
 .reading {
   max-width: 640px;
   margin: calc(var(--reading)*3) auto;
@@ -202,4 +179,40 @@ h1 {
 em {
   font-family: var(--displaystack);
   font-size: calc(var(--reading)*1.52);
+}
+
+@media screen and (max-width: 768px) {
+
+  .page {
+    flex-direction: column;
+    padding: 44px 0;
+    align-items: center;
+  }
+
+  nav {
+    padding: 33px 44px;
+    text-align: center;
+    width: auto;
+  }
+
+  .portfolio {
+    justify-content: center;
+  }
+
+  .portfolio figure {
+    width: calc((100% - 66px)/2);
+  }
+
+  .reading {
+    padding: 0 44px;
+  }
+
+  .use-case figure img {
+    border-radius: 0;
+  }
+
+  .reading .use-case figure img {
+    border-radius: 4px;
+  }
+
 }
