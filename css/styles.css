@@ -20,6 +20,7 @@
   --teal: #00ffcb;
   --blue: #0085ff;
   --yellow: #fbff44;
+  --white: #fff;
   --reading: 16px;
   --body: 14px;
   --fontstack: -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -111,6 +112,17 @@ figure figcaption {
   width: calc((100% - 99px)/4);
   max-width: 320px;
   min-width: 200px;
+  position: relative;
+}
+
+.portfolio figure figcaption {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 3px;
+  color: var(--white);
+  background: var(--gray);
+  padding: 3px;
 }
 
 .portfolio figure img, .use-case figure img {
