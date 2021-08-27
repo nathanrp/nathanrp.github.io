@@ -175,6 +175,25 @@ figure figcaption {
   border-radius: 4px;
 }
 
+.portfolio figure a {
+  display: block;
+}
+
+.portfolio figure a img {
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition-property: border-radius, border,;
+  transition-duration: .2s;
+}
+
+.portfolio figure a:hover {
+  
+}
+
+.portfolio figure a:hover img {
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--gray03);
+}
+
 .use-case figure.detail {
   padding: calc(var(--reading)*8) 0;
 }
