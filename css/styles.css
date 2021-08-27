@@ -251,6 +251,10 @@ em {
     width: auto;
   }
 
+  nav .show a {
+    opacity: 0;
+  }
+
   .portfolio {
     justify-content: center;
   }
