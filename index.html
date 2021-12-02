@@ -23,44 +23,71 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<script type="text/javascript">
+
+		function blinktag() {
+			var s=document.getElementById("blink");
+			s.style.visibility=(s.style.visibility=='visible')?'hidden':'visible';
+		}
+
+		setInterval('blinktag()',500);
+
+	</script>
+
 </head>
 <body>
 
 	<div class="page">
-		<nav>
+		<main>
+			<header>
+				<a href="/" class="pic"><img src="img/me.png" alt="Me" /></a>
+				<h1>Hello, I&rsquo;m Nathan Philpot, thanks for taking the time to visit.</h1>
+				<p>At work I am a product designer. I design usable interfaces and enjoyable user experiences.</p>
+			</header>
+			<section class="process">
+				<h2>Customers, collaboration, confidence. My design process.</h2>
+				<p>Talk to customers, a lot. Collaborate with your team: product managers, engineers, researchers, data, writers, <abbr>SME</abbr>s. Prototype until you are confident in your solution. Then release it into the wild and see what happens. Everything else is&hellip; it depends. </p>
+				<p>There are a lot of design tools, methods and processes. Design sprints, story mapping, personas, journey maps, usability testing, wireframes, user flows, affinity maps, empathy maps, value proposition canvas, competitive analysis, research, heuristic evaluation, prototyping and more.</p>
+				<p>It&rsquo;s just that I have found that the three things I most consistently use and see the best results from can be generalized as: talking to customers, collaborating with the team, and prototyping and testing solutions.</p>
+			</section>
+			<section class="works">
+				<div id="blink" class="blink">
+					<svg x="0px" y="0px" viewBox="0 0 21.2 35" style="enable-background:new 0 0 21.2 35; width: 21.5px; height: 35px;" xml:space="preserve">
+						<polygon points="21.2,14.7 11.7,14.7 16,0 0,20.3 9.8,20.3 5.5,35 "></polygon>
+					</svg>
+				</div>
+				<h2>Work</h2>
+				<div class="work">
+					<h3><a href="4.html">Mavenlink</a></h3>
+					<p>Lead product designer on the resource management and project management areas of our product.</p>
+				</div>
+				<div class="work">
+					<h3><a href="3.html"><abbr>TCS</abbr></a></h3>
+					<p><abbr>UX</abbr>, <abbr>IX</abbr>, and <abbr>UI</abbr> design for financial products.</p>
+				</div>
+				<div class="work">
+					<h3><a href="2.html"><abbr>WGU</abbr></a></h3>
+					<p>Lead design on <abbr>WGU</abbr>&rsquo;s student app. The app gave students the ability to study and monitor progress towards their degree, communicate with mentors, and other resources.</p>
+				</div>
+				<div class="work">
+					<h3><a href="1.html">H&amp;R Block</a></h3>
+					<p>I was the lead designer on their tax-pro product. This product is used by the tax pros in their retail offices, a channel for a billion dollars in revenue.</p>
+				</div>
+			</section>
+		</main>
+		<footer>
 			<ul>
-				<li class="logo"><a href="https://nathanrp.github.io">Nathan Philpot</a></li>
-				<li><a href="mailto:nathanphilpot@gmail.com">Email</a></li>
-				<li><a href="https://www.linkedin.com/in/nathanphilpot/">LinkedIn</a></li>
-				<li><a href="https://twitter.com/nathanphilpot">Twitter</a></li>
-			</ul>
-			<ul class="meta">
+				<li><a href="mailto:nathanphilpot@gmail.com" target="_blank">Email</a></li>
+				<li><a href="https://www.linkedin.com/in/nathanphilpot/" target="_blank">LinkedIn<i>&nearr;</i></a></li>
+				<li><a href="https://twitter.com/nathanphilpot" target="_blank">Twitter<i>&nearr;</i></a></li>
+				<li><a href="https://dribbble.com/nathanphilpot" target="_blank">Dribbble<i>&nearr;</i></a></li>
 				<li>&#x1F44D;</li>
 			</ul>
-		</nav>
-		<div class="content">
-			<section class="portfolio">
-				<figure>
-					<a href="mavenlink.html"><img src="img/ml.png" alt="Portfolio &rarr; Mavenlink" /></a>
-				</figure>
-				<figure>
-					<a href="wgu.html"><img src="img/wgu.png" alt="WGU" /></a>
-				</figure>
-				<figure>
-					<a href="hrb.html"><img src="img/hrb.png" alt="H&amp;R Block" /></a>
-				</figure>
-				<figure>
-					<a href="tcs.html"><img src="img/tcs.png" alt="TCS" /></a>
-				</figure>
-				<figure>
-					<a href="process.html"><img src="img/ccc.png" alt="Customers, collaboration, confidence. My take on the design process." /></a>
-				</figure>
-				<figure>
-					<img src="img/photo-1.jpg" alt="TCS" />
-					<figcaption>Teamwork makes the dream work.</figcaption>
-				</figure>
-			</section>
-		</div>
+		</footer>
 	</div>
 
 </body>

@@ -5,7 +5,7 @@ function darkMode() {
 
 $( document ).ready(function() {
     console.log('ready');
-    var navH = $('nav ul:first-child').height();
+    var navH = $('.gallery figure:first-child').height();
 
     $(window).scroll(function (event) {
         console.log(navH);
