@@ -109,34 +109,37 @@ header p {
   color: var(--gray54);
 }
 
-.pic {
+.pic, .pic::after, .totop {
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  display: block;
+}
+
+.pic {
   margin: 0 0 64px;
   overflow: hidden;
-  display: block;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
   transition-property: background, color;
   transition-duration: .2s;
   position: relative;
 }
 
-.pic:after {
+.pic::after {
   content: '\2190';
   left: 0;
   top: 0;
 }
 
+.pic.home::after {
+  content: '';
+}
+
 .pic::after, .totop {
   color: var(--white);
-  display: block;
   text-align: center;
-  width: 64px;
-  height: 64px;
   line-height: 64px;
   font-weight: 500;
-  border-radius: 50%;
   font-size: calc(var(--reading)*1.5625);
   cursor: pointer;
   opacity: 0;
