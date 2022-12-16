@@ -118,14 +118,11 @@ footer ul li {
   padding: 0 0 var(--reading);
 }
 
-.stuffs .stuff {
-  padding: 40px;
-}
-
 .stuff {
     background: var(--whiter);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--gray03);
+    padding: 40px;
 }
 
 .stuff figure {
