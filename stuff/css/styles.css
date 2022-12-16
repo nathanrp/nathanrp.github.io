@@ -116,7 +116,7 @@ footer ul li {
 
 .stuff {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0 0 10px var(--gray03);
     padding: 0 40px 40px;
 }
