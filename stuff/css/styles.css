@@ -17,7 +17,7 @@
   --blue12: rgba(var(--blueRGB), .12);
   --blue38: rgba(var(--blueRGB), .38);
   --yellow: #fbff44;
-  --white: rgba(var(--whiter));
+  --white: rgba(var(--whiter), 1);
   --white87: rgba(var(--whiter), 0.87);
   --white54: rgba(var(--whiter), 0.54);
   --white38: rgba(var(--whiter), 0.38);
@@ -56,10 +56,6 @@ h1, h2 {
   margin-bottom: var(--reading);
   font-weight: 500;
   line-height: calc((var(--reading)*1.52));
-}
-
-h2 {
-  margin-bottom: 40px;
 }
 
 h3 {
@@ -119,7 +115,7 @@ footer ul li {
 }
 
 .stuff {
-    background: var(--whiter);
+    background: var(--white);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--gray03);
     padding: 40px;
@@ -127,6 +123,7 @@ footer ul li {
 
 .stuff figure {
     text-align: center;
+    margin-bottom: var(--reading);
 }
 
 .stuff figure a {
