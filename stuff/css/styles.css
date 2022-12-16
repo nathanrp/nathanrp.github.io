@@ -38,11 +38,16 @@ body {
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   padding: 40px;
+  background: var(--gray03);
 }
 
 header, footer, .stuffs {
     max-width: 600px;
     margin: 0 auto;
+}
+
+header {
+    text-align: center;
 }
 
 h1, h2 {
@@ -54,7 +59,7 @@ h1, h2 {
 }
 
 h2 {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 h3 {
@@ -98,7 +103,7 @@ abbr {
 }
 
 header {
-  padding: 0 0 128px;
+  padding: 0 0 100px;
 }
 
 header p {
@@ -113,8 +118,26 @@ footer ul li {
   padding: 0 0 var(--reading);
 }
 
-.works .work {
-  padding: 0 0 128px;
+.stuffs .stuff {
+  padding: 40px;
+}
+
+.stuff {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--gray03);
+}
+
+.stuff figure {
+    text-align: center;
+}
+
+.stuff figure a {
+    display: block;
+}
+
+.stuff figure a img {
+    display: inline-block;
 }
 
 @media screen and (max-width: 768px) {
