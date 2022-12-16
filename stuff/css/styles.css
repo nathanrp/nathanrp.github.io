@@ -118,12 +118,20 @@ footer ul li {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--gray03);
-    padding: 40px;
+    padding: 0 40px 40px;
+}
+
+.stuff h2 {
+    margin-bottom: var(--reading);
+}
+
+.stuff p:last-of-type {
+    margin-bottom: 0;
 }
 
 .stuff figure {
     text-align: center;
-    margin-bottom: var(--reading);
+    margin-bottom: calc(var(--reading) / 4);
 }
 
 .stuff figure a {
