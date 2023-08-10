@@ -94,11 +94,14 @@ abbr {
 .page {
   position: relative;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 352px auto;
-  grid-gap: 128px;
   max-width: 1152px;
   padding: 128px 32px 352px;
+}
+
+header, .page p {
+  width: 352px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header, .process {
@@ -192,11 +195,20 @@ footer ul li {
 }
 
 .hero {
-  grid-column: span 2;
 }
 
 figure {
-  padding: 0 0 112px;
+  padding: 112px 0;
+  text-align: center;
+}
+
+figure.screen {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin-top: 112px;
+  margin-bottom: 112px;
+  background: rgba(var(--eigengrau), 0.03);
+  border-radius: 4px;
 }
 
 figure figcaption {
@@ -207,9 +219,9 @@ figure figcaption {
   text-align: center;
 }
 
-.gallery figure img {
-  display: block;
-  width: 100%;
+figure img {
+  display: inline-block;
+  max-width: 100%;
   border-radius: 4px;
 }
 
@@ -242,6 +254,21 @@ figure figcaption {
 
   .page {
     display: block;
+  }
+
+  header, .page p {
+    width: auto;
+  }
+
+  figure {
+    padding: var(--reading) 0;
+    text-align: center;
+  }
+  
+  figure.screen {
+    padding: var(--reading);
+    margin-top: calc((var(--reading)*1.52));
+    margin-bottom: calc((var(--reading)*1.52));
   }
 
   footer {
