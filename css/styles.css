@@ -91,6 +91,14 @@ abbr {
   letter-spacing: 1px;
 }
 
+.hilite {
+  background: var(--yellow);
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 4px;
+  margin: 0 -4px;
+}
+
 .page {
   position: relative;
   margin: 0 auto;
@@ -98,8 +106,8 @@ abbr {
   padding: 128px 32px 352px;
 }
 
-header, .page p {
-  width: 352px;
+header, h2, h3, .blink, .page p, footer {
+  width: 448px;
   margin-left: auto;
   margin-right: auto;
 }
