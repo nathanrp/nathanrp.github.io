@@ -43,12 +43,12 @@ h1, h2 {
   font-family: var(--fontstack);
   font-size: var(--reading);
   margin-bottom: var(--reading);
-  font-weight: 500;
   line-height: calc((var(--reading)*1.52));
 }
 
 h2 {
   margin-bottom: 48px;
+  font-weight: 500;
 }
 
 h3 {
@@ -187,7 +187,7 @@ footer ul li {
 }
 
 .blink {
-  width: 29.07px;
+  /* width: 29.07px; */
   height: 48px;
   margin-bottom: 32px;
 }
