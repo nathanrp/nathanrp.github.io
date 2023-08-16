@@ -24,6 +24,7 @@
   --reading: 16px;
   --body: 14px;
   --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
 }
 
 html, body {
@@ -52,12 +53,18 @@ h2 {
 }
 
 h3 {
-  margin-bottom: var(--reading);
+  font-weight: 500;
+  color: var(--teal);
 }
 
 h3, p {
   line-height: calc((var(--reading)*1.52));
   margin-bottom: var(--reading);
+}
+
+code {
+  font-family: var(--codestack);
+  font-size: calc((var(--reading)*.875));;
 }
 
 a {
@@ -97,6 +104,15 @@ abbr {
   padding: 0 4px;
   border-radius: 4px;
   margin: 0 -4px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: var(--teal);
+  color: var(--white);
+  text-shadow: 0px 0px 10px var(--gray12);
 }
 
 .page {
