@@ -50,6 +50,7 @@ h1, h2 {
 h2 {
   margin-bottom: 48px;
   font-weight: 500;
+  color: var(--blue);
 }
 
 h3 {
