@@ -11,12 +11,14 @@
   --gray38: rgba(var(--eigengrau), 0.38);
   --gray12: rgba(var(--eigengrau), 0.12);
   --gray03: rgba(var(--eigengrau), 0.03);
+  --gray01: rgba(var(--eigengrau), 0.01);
   --teal: #00ffcb;
   --blueRGB: 0, 133, 255;
   --blue: rgba(var(--blueRGB));
   --blue12: rgba(var(--blueRGB), .12);
   --blue38: rgba(var(--blueRGB), .38);
   --yellow: #fbff44;
+  --orange: rgb(229, 82, 66);
   --white: rgba(var(--whiter));
   --white87: rgba(var(--whiter), 0.87);
   --white54: rgba(var(--whiter), 0.54);
@@ -24,6 +26,7 @@
   --reading: 16px;
   --body: 14px;
   --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --displaystack: 'Calistoga', cursive;
   --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
 }
 
@@ -38,28 +41,32 @@ body {
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
+  background: var(--gray01);
 }
 
 h1, h2 {
-  font-family: var(--fontstack);
-  font-size: var(--reading);
+  font-family: var(--displaystack);
   margin-bottom: var(--reading);
-  line-height: calc((var(--reading)*1.52));
+  line-height: 1.4em;
 }
 
+h1 {
+  font-size: calc((var(--reading)*1.5));
+}
+
+
 h2 {
-  margin-bottom: 48px;
+  font-size: calc((var(--reading)*1.25));
   font-weight: 500;
-  color: var(--blue);
+  color: var(--gray87);
 }
 
 h3 {
-  font-weight: 500;
-  color: var(--blue);
+  font-weight: 600;
 }
 
 h3, p {
-  line-height: calc((var(--reading)*1.52));
+  line-height: 1.4em;
   margin-bottom: var(--reading);
 }
 
@@ -99,6 +106,10 @@ abbr {
   letter-spacing: 1px;
 }
 
+i {
+  font-family: var(--fontstack);
+}
+
 .hilite {
   background: var(--yellow);
   display: inline-block;
@@ -129,8 +140,8 @@ header, h2, h3, .mallard, .blink, .page p, footer {
   margin-right: auto;
 }
 
-header, .process {
-  padding: 0 0 128px;
+header, .process, .works .work {
+  padding: 0 0 64px;
 }
 
 header p {
@@ -203,10 +214,6 @@ footer ul li {
   padding: 0 0 var(--reading);
 }
 
-.mallard {
-  font-size: 48px;
-}
-
 .blink, .mallard {
   /* width: 29.07px; */
   height: 48px;
@@ -217,10 +224,6 @@ footer ul li {
   width: 100%;
   height: 100%;
   fill: var(--gray87);
-}
-
-.works .work {
-  padding: 0 0 128px;
 }
 
 figure {
@@ -243,6 +246,10 @@ figure figcaption {
   padding: var(--reading) 0;
   border-radius: 4px;
   text-align: center;
+  font-family: var(--codestack);
+  line-height: 1.4em;
+  max-width: 100vh;
+  margin: 0 auto;
 }
 
 figure img {
@@ -283,7 +290,7 @@ figure img {
     display: block;
   }
 
-  header, .page p {
+  header, h2, h3, .mallard, .blink, .page p, footer {
     width: auto;
   }
 
