@@ -65,7 +65,7 @@ h3 {
   font-weight: 600;
 }
 
-h3, p {
+h3, p, .row .col h5:only-child {
   line-height: 1.4em;
   margin-bottom: var(--reading);
 }
@@ -170,6 +170,7 @@ header p {
   transition-property: background, color;
   transition-duration: .2s;
   position: relative;
+  margin-bottom: 64px;
 }
 
 .pic::after {
@@ -272,13 +273,12 @@ figure img {
     display: block;
   }
 
-  header, h2, h3, .mallard, .blink, .page p, footer {
-    width: auto;
+  .row {
+    display: block;
   }
 
   figure {
     padding: var(--reading) 0;
-    text-align: center;
   }
   
   figure.screen {
