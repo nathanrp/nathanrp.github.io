@@ -249,13 +249,16 @@ figure {
   text-align: center;
 }
 
-figure.screen {
+figure.screen, figure.white-jpg {
   padding-top: 56px;
   padding-bottom: 56px;
   margin-top: 112px;
   margin-bottom: 112px;
-  background: rgba(var(--eigengrau), 0.03);
   border-radius: 4px;
+}
+
+figure.screen {
+  background: rgba(var(--eigengrau), 0.03);
 }
 
 figure.white-jpg {
