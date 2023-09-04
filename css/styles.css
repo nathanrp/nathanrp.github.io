@@ -258,6 +258,10 @@ figure.screen {
   border-radius: 4px;
 }
 
+figure.white-jpg {
+  background: #fff;
+}
+
 figure figcaption {
   font-size: calc((var(--reading))*.75);
   color: var(--gray38);
