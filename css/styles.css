@@ -145,17 +145,33 @@ ol li {
   padding: 128px 32px 352px;
 }
 
-.row {
+.row, nav {
   max-width: 768px;
   display: grid;
-  grid-template-columns: auto 448px;
   column-gap: 32px;
   margin: var(--reading) auto;
+}
+
+.row {
+  grid-template-columns: auto 448px;
 }
 
 .solo-col {
   max-width: 448px;
   margin: var(--reading) auto;
+}
+
+nav {
+  margin-top: 112px;
+  grid-template-columns: auto auto;
+}
+
+nav .pic {
+  margin-bottom: 0;
+}
+
+nav .next {
+  text-align: right;
 }
 
 header, .process, .works .work {
@@ -170,7 +186,6 @@ header p {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  display: block;
 }
 
 .pic {
@@ -180,6 +195,7 @@ header p {
   transition-duration: .2s;
   position: relative;
   margin-bottom: 64px;
+  display: inline-block;
 }
 
 .pic::after {
@@ -188,6 +204,7 @@ header p {
   top: 0;
   opacity: 0;
   position: absolute;
+  display: block;
 }
 
 .pic.home::after {
@@ -232,21 +249,10 @@ footer ul li {
   padding: 0 0 var(--reading);
 }
 
-.blink, .mallard {
-  /* width: 29.07px; */
-  height: 48px;
-  margin-bottom: 32px;
-}
-
-.blink svg {
-  width: 100%;
-  height: 100%;
-  fill: var(--gray87);
-}
-
 figure {
   padding: 112px 0;
   text-align: center;
+  border-radius: 4px;
 }
 
 figure.screen, figure.white-jpg {
@@ -263,6 +269,15 @@ figure.screen {
 
 figure.white-jpg {
   background: #fff;
+}
+
+figure.hrb-color {
+  background-color: #025f87;
+  color: var(--white54);
+}
+
+figure.hrb-color figcaption {
+  color: var(--white54);
 }
 
 figure figcaption {
@@ -289,7 +304,7 @@ figure img {
     display: block;
   }
 
-  .row {
+  .row, nav {
     display: block;
   }
 
