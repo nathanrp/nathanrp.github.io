@@ -41,7 +41,8 @@ body {
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
-  background: var(--gray01);
+  background: var(--gray01) url('drip.png') no-repeat top center;
+  background-size: 50%;
 }
 
 h1, h2 {
@@ -299,6 +300,10 @@ figure img {
 }
 
 @media screen and (max-width: 768px) {
+
+  body {
+    background-size: 120%;
+  }
 
   .page {
     display: block;
