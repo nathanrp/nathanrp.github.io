@@ -17,7 +17,7 @@
   --blue: rgba(var(--blueRGB));
   --blue12: rgba(var(--blueRGB), .12);
   --blue38: rgba(var(--blueRGB), .38);
-  --yellow: #fbff44;
+  --yellow: #f9ec4d;
   --orange: rgb(229, 82, 66);
   --white: rgba(var(--whiter));
   --white87: rgba(var(--whiter), 0.87);
