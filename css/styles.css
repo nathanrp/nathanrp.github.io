@@ -280,10 +280,6 @@ figure.screen img, figure.research img {
 
 @media screen and (max-width: 768px) {
 
-  body {
-    background-size: 120%;
-  }
-
   .page {
     display: block;
   }
@@ -291,11 +287,9 @@ figure.screen img, figure.research img {
   figure {
     padding: var(--reading) 0;
   }
-  
-  figure.screen {
-    padding: var(--reading);
-    margin-top: calc((var(--reading)*1.52));
-    margin-bottom: calc((var(--reading)*1.52));
+
+  figure.research img {
+    max-width: 100%;
   }
 
   footer {
