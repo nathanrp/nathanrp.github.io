@@ -15,16 +15,18 @@
   --teal: #00ffcb;
   --blueRGB: 0, 133, 255;
   --blue: rgba(var(--blueRGB));
+  --blue03: rgba(var(--blueRGB), .03);
   --blue12: rgba(var(--blueRGB), .12);
   --blue38: rgba(var(--blueRGB), .38);
+  --blue54: rgba(var(--blueRGB), .54);
   --yellow: #f9ec4d;
   --orange: rgb(229, 82, 66);
   --white: rgba(var(--whiter));
   --white87: rgba(var(--whiter), 0.87);
   --white54: rgba(var(--whiter), 0.54);
   --white38: rgba(var(--whiter), 0.38);
-  --reading: 16px;
-  --body: 14px;
+  --reading: inherit;
+  --body: inherit;
   --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --displaystack: 'Calistoga', cursive;
   --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
@@ -42,23 +44,27 @@ body {
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   background: var(--gray01);
+  line-height: 1.4;
 }
 
 h1, h2 {
   /* font-family: var(--displaystack); */
-  margin-bottom: var(--reading);
+  margin-bottom: 2em;
   line-height: 1.4em;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 h1 {
-  font-size: calc((var(--reading)*1.5));
+  font-size: 16px;
+}
+
+h1 span {
+  color: var(--gray54);
 }
 
 h2 {
   font-size: var(--reading);
-  font-weight: 700;
-  color: var(--gray87);
+  font-weight: 500;
 }
 
 h3 {
@@ -68,7 +74,7 @@ h3 {
 }
 
 h5 {
-  padding: .5em 0;
+  margin:  0 0 1rem;
 }
 
 p, ol {
@@ -76,7 +82,7 @@ p, ol {
   padding-bottom: var(--reading);
 }
 
-code, h5 {
+code {
   font-family: var(--codestack);
   font-size: calc((var(--reading)*.8125));
   line-height: 1.4em;
@@ -86,9 +92,10 @@ code, h5 {
 a {
   color: var(--blue);
   display: inline-block;
-  text-decoration-color: var(--blue12);
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--blue38);
+  text-decoration-style: dotted;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
   transition-property: text-decoration-color, color;
   transition-duration: .2s;
@@ -101,8 +108,35 @@ a i {
 }
 
 a:hover {
-  text-decoration-color: var(--blue38);
   text-decoration-thickness: 2px;
+  text-decoration-color: var(--blue38);
+  text-decoration-style: dashed;
+}
+
+a.liink {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 -1rem 1rem;
+}
+
+a.liink:hover {
+  background-color: var(--blue03);
+}
+
+a.liink .desc {
+  color: var(--gray54);
+}
+
+a.liink:hover .title {
+  color: var(--blue);
+}
+
+a.liink:hover .desc {
+  color: var(--blue54);
 }
 
 p a {
@@ -139,14 +173,8 @@ ol li {
 .page {
   position: relative;
   margin: 0 auto;
-  max-width: 1152px;
-  padding: 32px 32px 352px;
-}
-
-.page header, .page h2, .page h3, .page h5, .page p, .page ol, nav, footer {
   max-width: 576px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 2rem;
 }
 
 nav {
@@ -164,8 +192,8 @@ nav .next {
   text-align: right;
 }
 
-header, .process, .works .work {
-  padding: 0 0 2em;
+header {
+  padding: 3rem 0 8rem;
 }
 
 header p {
@@ -240,7 +268,7 @@ footer h5 {
 }
 
 footer ul li {
-  padding: 0 0 var(--reading);
+  padding: 0 0 1rem;
 }
 
 img.blend {
@@ -278,11 +306,11 @@ figure.screen img, figure.research img {
   border: none;
 }
 
-@media screen and (max-width: 768px) {
+.hidden {
+  display: none !important;
+}
 
-  .page {
-    display: block;
-  }
+@media screen and (max-width: 768px) {
 
   figure {
     padding: var(--reading) 0;
@@ -294,6 +322,10 @@ figure.screen img, figure.research img {
 
   footer {
     padding: 0;
+  }
+
+  .mobile-hide {
+    display: none;
   }
 
 }
