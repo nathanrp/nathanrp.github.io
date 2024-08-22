@@ -48,50 +48,35 @@ body {
 }
 
 h1, h2 {
-  /* font-family: var(--displaystack); */
   margin-bottom: 2em;
-  line-height: 1.4em;
   font-weight: 500;
-}
-
-h1 {
-  font-size: 16px;
 }
 
 h1 span {
   color: var(--gray54);
 }
 
-h2 {
-  font-size: var(--reading);
-  font-weight: 500;
-}
-
 h3 {
   font-weight: 600;
-  padding: .5em 0;
-  line-height: 1.4em;
+  margin-bottom: 1rem;
 }
 
 h5 {
-  margin:  0 0 1rem;
+  margin-bottom: 1rem;
 }
 
 p, ol {
-  line-height: 1.4em;
-  padding-bottom: var(--reading);
+  margin-bottom: 2rem;
 }
 
 code {
   font-family: var(--codestack);
-  font-size: calc((var(--reading)*.8125));
-  line-height: 1.4em;
   color: var(--gray54);
 }
 
 a {
   color: var(--blue);
-  display: inline-block;
+  /* display: inline-block; */
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   text-decoration-color: var(--blue38);
@@ -139,10 +124,6 @@ a.liink:hover .desc {
   color: var(--blue54);
 }
 
-p a {
-  display: inline;
-}
-
 abbr {
   font-size: .96em;
   letter-spacing: 1px;
@@ -157,17 +138,8 @@ ol {
 }
 
 ol li {
-  padding: 0 0 calc((var(--reading))/2);
+  padding: 0 0 1rem;
   list-style: disc;
-}
-
-.tag {
-  display: inline-block;
-  padding: 0 4px;
-  border-radius: 4px;
-  background: var(--teal);
-  color: var(--white);
-  text-shadow: 0px 0px 10px var(--gray12);
 }
 
 .page {
@@ -193,7 +165,7 @@ nav .next {
 }
 
 header {
-  padding: 3rem 0 8rem;
+  padding: 3rem 0 4rem;
 }
 
 header p {
@@ -260,11 +232,7 @@ header p {
 }
 
 footer {
-  padding: 5em 0 0 0;
-}
-
-footer h5 {
-  padding-bottom: 1em;
+  padding: 5rem 0 0 0;
 }
 
 footer ul li {
@@ -281,12 +249,9 @@ figure {
 }
 
 figure figcaption {
-  font-size: calc((var(--reading))*.75);
   color: var(--gray38);
   padding: var(--reading) 0;
   border-radius: 4px;
-  font-family: var(--codestack);
-  line-height: 1.4em;
   max-width: 448px;
   margin: 0 auto;
 }
