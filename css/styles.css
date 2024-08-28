@@ -1,6 +1,7 @@
 /* @styles */
 
 @import "reset.css";
+@import "drums.css";
 
 :root {
   --eigengrau: 22,22,29;
@@ -12,7 +13,12 @@
   --gray12: rgba(var(--eigengrau), 0.12);
   --gray03: rgba(var(--eigengrau), 0.03);
   --gray01: rgba(var(--eigengrau), 0.01);
-  --teal: #00ffcb;
+  --tealRGB: 0, 255, 200;
+  --teal: rgba(var(--tealRGB));
+  --teal03: rgba(var(--tealRGB), .03);
+  --teal12: rgba(var(--tealRGB), .12);
+  --teal38: rgba(var(--tealRGB), .38);
+  --teal54: rgba(var(--tealRGB), .54);
   --blueRGB: 0, 133, 255;
   --blue: rgba(var(--blueRGB));
   --blue03: rgba(var(--blueRGB), .03);
@@ -77,25 +83,15 @@ code {
 a {
   color: var(--blue);
   /* display: inline-block; */
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
   text-underline-offset: 4px;
-  text-decoration-color: var(--blue38);
-  text-decoration-style: dotted;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-  transition-property: text-decoration-color, color;
-  transition-duration: .2s;
+  text-decoration-color: var(--blue12);
 }
 
 a i {
   margin: 0 0 0 4px;
   text-decoration: none;
   display: inline-block;
-}
-
-a:hover {
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--blue38);
-  text-decoration-style: dashed;
 }
 
 a.liink {
@@ -106,6 +102,10 @@ a.liink {
   padding: 1rem;
   border-radius: 10px;
   margin: 0 -1rem 1rem;
+}
+
+a.liink.pre {
+  background-color: var(--gray03);
 }
 
 a.liink:hover {
@@ -142,17 +142,85 @@ ol li {
   list-style: disc;
 }
 
+.btn {
+  background-color: var(--blue03);
+  padding: 1rem 1.5rem .8rem;
+  border-radius: 10px;
+  margin: 0 0 1rem;
+  text-decoration: none;
+  color: var(--blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+  transition: background-color .07s, color .07s;
+  cursor: pointer;
+}
+
+.btn svg {
+  transition: fill .07s;
+}
+
+.btn .hotkey {
+  display: inline-block;
+  padding: 0 4px;
+  border: solid 1px var(--gray12);
+  font-family: var(--codestack);
+  border-radius: 4px;
+  color: var(--gray54);
+  font-size: .8em;
+}
+
+.btn:hover {
+  background-color: var(--blue12);
+  color: var(--blue);
+}
+
+.btn svg .fill-primary {
+  fill: var(--blue);
+}
+
+.btn svg .fill-secondary {
+  fill: var(--blue38);
+}
+
+.btn:active, .btn.active {
+  background-color: var(--blue);
+  color: var(--white87);
+}
+
+.btn:active svg .fill-primary, .btn.active svg .fill-primary {
+  fill: var(--white87);
+}
+
+.btn:active svg .fill-secondary, .btn.active svg .fill-secondary {
+  fill: var(--white38);
+}
+
+.btns {
+  padding: 2rem 0;
+}
+
+svg .fill-primary {
+  fill: var(--gray87);
+}
+
+svg .fill-secondary {
+  fill: var(--gray38);
+}
+
 .page {
   position: relative;
   margin: 0 auto;
   max-width: 576px;
-  padding: 2rem;
+  padding: 4rem 0;
 }
 
 nav {
   display: grid;
   column-gap: 32px;
-  padding: 2em 0;
+  padding: 0 0 2rem;
   grid-template-columns: auto auto;
 }
 
@@ -231,8 +299,8 @@ header p {
   opacity: 0;
 }
 
-footer {
-  padding: 5rem 0 0 0;
+footer ul {
+  margin-bottom: 4rem;
 }
 
 footer ul li {
@@ -297,28 +365,11 @@ figure.screen img, figure.research img {
 
 .dark {
   background: var(--black);
-  color: var(--white);
-  -webkit-font-smoothing: antialiased;
-}
-
-.dark a {
-  color: var(--teal);
-}
-
-.dark .logo a {
-  color: var(--white);
-}
-
-.dark .logo a:hover {
-  color: var(--teal);
-}
-
-.dark nav .meta {
   color: var(--white54);
 }
 
-.dark figure figcaption {
-  color: var(--white38);
+.dark i.emoji {
+  color: var(--white);
 }
 
 .dark .portfolio figure figcaption {
