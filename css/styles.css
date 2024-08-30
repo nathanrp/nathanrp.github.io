@@ -2,6 +2,8 @@
 
 @import "reset.css";
 @import "heart.css";
+@import "dark.css";
+@import "media.css";
 
 :root {
   --eigengrau: 22,22,29;
@@ -19,6 +21,7 @@
   --teal12: rgba(var(--tealRGB), .12);
   --teal38: rgba(var(--tealRGB), .38);
   --teal54: rgba(var(--tealRGB), .54);
+  --teal87: rgba(var(--tealRGB), .87);
   --blueRGB: 0, 133, 255;
   --blue: rgba(var(--blueRGB));
   --blue03: rgba(var(--blueRGB), .03);
@@ -31,6 +34,7 @@
   --white87: rgba(var(--whiter), 0.87);
   --white54: rgba(var(--whiter), 0.54);
   --white38: rgba(var(--whiter), 0.38);
+  --white12: rgba(var(--whiter), 0.12);
   --reading: inherit;
   --body: inherit;
   --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -50,7 +54,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   background: var(--gray01);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 h1, h2 {
@@ -202,6 +206,56 @@ ol li {
   padding: 2rem 0;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blue12);
+  transition: .4s;
+  border-radius: 12px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: var(--blue);
+  transition: .5s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px var(--gray12);
+}
+
+input:checked + .slider {
+  background-color: var(--blue54);
+}
+
+input:focus + .slider {
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+  background-color: var(--blue);
+}
+
 svg .fill-primary {
   fill: var(--gray87);
 }
@@ -234,6 +288,9 @@ nav .next {
 
 header {
   padding: 3rem 0 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 header p {
@@ -341,37 +398,4 @@ figure.screen img, figure.research img {
 
 .hidden {
   display: none !important;
-}
-
-@media screen and (max-width: 768px) {
-
-  figure {
-    padding: var(--reading) 0;
-  }
-
-  figure.research img {
-    max-width: 100%;
-  }
-
-  footer {
-    padding: 0;
-  }
-
-  .mobile-hide {
-    display: none;
-  }
-
-}
-
-.dark {
-  background: var(--black);
-  color: var(--white54);
-}
-
-.dark i.emoji {
-  color: var(--white);
-}
-
-.dark .portfolio figure figcaption {
-  color: var(--white);
 }

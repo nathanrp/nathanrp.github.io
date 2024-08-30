@@ -3,17 +3,40 @@ const defibullators = document.querySelectorAll('.defibullator');
 var beat = new Howl({src: ['sounds/kick.wav']})
 var heart = document.querySelector(".heart");
 var defibullator = document.getElementById('defibullator');
+var pumps = 0
+var heartBeat
+
+function startHeart() {
+    heartBeat = setTimeout(() => {
+                    heart.classList.remove('beating');
+                    heart.src='img/heart.gif';
+                    pumps = 0
+                }, pumps * 950);
+    setTimeout(() => {
+        defibullator.classList.remove('active');
+    }, 100);
+}
+
+function pumpHeart() {
+    clearTimeout(heartBeat); // Clear the existing timeout
+    heartBeat = setTimeout(() => {
+                    heart.classList.remove('beating');
+                    heart.src='img/heart.gif';
+                    pumps = 0
+                }, pumps * 950);
+    setTimeout(() => {
+        defibullator.classList.remove('active');
+    }, 100);            
+}
 
 function shock() {
+    pumps++
     if (!(heart.classList.contains('beating'))) {
         heart.classList.add('beating');
         heart.src='img/heart-beating.gif';
-        setTimeout(function(){
-            heart.classList.remove('beating');
-            heart.src='img/heart.gif';
-        }, 920);
+        startHeart();
     } else {
-        
+        pumpHeart();
     }
 }
 
@@ -21,6 +44,7 @@ defibullators.forEach(element => {
     element.addEventListener('mousedown', function() {
         beat.play();
         shock();
+        defibullator.classList.add('active');
     });
 });
 
@@ -41,7 +65,7 @@ document.onkeypress = function (e) {
     if (e.repeat) { return }
     // spacebar
     if(e.keyCode == "32"){
-        event.preventDefault();
+        e.preventDefault();
     }
 };
 
