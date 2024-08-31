@@ -46,11 +46,6 @@ defibullators.forEach(element => {
         shock();
         defibullator.classList.add('active');
     });
-    element.addEventListener('touchstart', function() {
-        beat.play();
-        shock();
-        defibullator.classList.add('active');
-    });
 });
 
 document.onkeydown = function (e) {
@@ -69,12 +64,6 @@ document.ontouchstart = function (e) {
     e = e || window.event;
     if (e.repeat) { return }
     // spacebar
-    if(e.keyCode == "32"){
-        beat.play();
-        shock();
-        defibullator.classList.add('active');
-        e.preventDefault();
-    }
 };;
 
 document.onkeypress = function (e) {
