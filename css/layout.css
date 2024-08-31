@@ -48,11 +48,11 @@
     font-variant-ligatures: common-ligatures;
     background: var(--gray01);
     line-height: 1.5;
-    transition: background-color .7s;
+    transition: background-color .1s;
   }
   
   body * {
-    transition: background-color .7s, color .4s;
+    transition: background-color .1s, color .1s;
   }
   
   h1, h2 {
@@ -224,7 +224,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--blue12);
+    /* background-color: var(--blue12); */
     transition: .4s;
     border-radius: 12px;
   }
@@ -236,14 +236,14 @@
     width: 18px;
     left: 4px;
     bottom: 3px;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     transition: .5s;
     border-radius: 50%;
-    box-shadow: 0 1px 3px var(--gray12);
+    box-shadow: 0 1px 3px var(--white);
   }
   
   input:checked + .slider {
-    background-color: var(--blue54);
+    /* background-color: var(--blue54); */
   }
   
   input:focus + .slider {
@@ -251,7 +251,7 @@
   
   input:checked + .slider:before {
     transform: translateX(22px);
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
   }
   
   svg .fill-primary {
