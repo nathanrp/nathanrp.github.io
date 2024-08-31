@@ -1,6 +1,18 @@
 
 @media screen and (max-width: 768px) {
 
+    .page {
+        padding: 0 2rem;
+    }
+
+    .heart-machine {
+        flex-direction: column;
+    }
+
+    .btn .hotkey {
+        display: none;
+    }
+
     .mobile-hide {
         display: none;
     }

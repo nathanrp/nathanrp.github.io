@@ -46,6 +46,11 @@ defibullators.forEach(element => {
         shock();
         defibullator.classList.add('active');
     });
+    element.addEventListener('touchstart', function() {
+        beat.play();
+        shock();
+        defibullator.classList.add('active');
+    });
 });
 
 document.onkeydown = function (e) {
@@ -60,6 +65,18 @@ document.onkeydown = function (e) {
     }
 };
 
+document.ontouchstart = function (e) {
+    e = e || window.event;
+    if (e.repeat) { return }
+    // spacebar
+    if(e.keyCode == "32"){
+        beat.play();
+        shock();
+        defibullator.classList.add('active');
+        e.preventDefault();
+    }
+};;
+
 document.onkeypress = function (e) {
     e = e || window.event;
     if (e.repeat) { return }
@@ -70,6 +87,12 @@ document.onkeypress = function (e) {
 };
 
 document.onkeyup = function (e) {
+    e = e || window.event;
+    if (e.repeat) { return }
+    defibullator.classList.remove('active');
+};
+
+document.ontouchend = function (e) {
     e = e || window.event;
     if (e.repeat) { return }
     defibullator.classList.remove('active');
