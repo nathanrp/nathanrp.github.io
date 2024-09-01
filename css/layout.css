@@ -33,11 +33,15 @@
     --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --displaystack: 'Calistoga', cursive;
     --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
-  }
+}
   
-  html, body {
+html {
+    background-color: var(--black);
+}
+
+html, body {
     scroll-behavior: smooth;
-  }
+}
   
   body {
     font-family: var(--fontstack);
@@ -46,41 +50,41 @@
     color: var(--black);
     -webkit-font-smoothing: antialiased;
     font-variant-ligatures: common-ligatures;
-    background: var(--gray01);
     line-height: 1.5;
-    transition: background-color .1s;
-  }
+    background-color: var(--white);
+    transition: background-color .1s, margin 0.3s cubic-bezier(0.32, 0.72, 0, 1), border-radius 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
   
   body * {
     transition: background-color .1s, color .1s;
-  }
+}
   
   h1, h2 {
     margin-bottom: 2em;
     font-weight: 500;
-  }
+}
   
   h1 span {
     color: var(--gray54);
-  }
+}
   
   h3 {
     font-weight: 600;
     margin-bottom: 1rem;
-  }
+}
   
   h5 {
     margin-bottom: 1rem;
-  }
+}
   
   p, ol {
     margin-bottom: 2rem;
-  }
+}
   
   code {
     font-family: var(--codestack);
     color: var(--gray54);
-  }
+}
   
   a {
     color: var(--blue);
@@ -88,13 +92,13 @@
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
     text-decoration-color: var(--blue12);
-  }
+}
   
   a i {
     margin: 0 0 0 4px;
     text-decoration: none;
     display: inline-block;
-  }
+}
   
   a.liink {
     display: flex;
@@ -104,47 +108,47 @@
     padding: 1rem;
     border-radius: 10px;
     margin: 0 -1rem 1rem;
-  }
+}
   
   a.liink.pre {
     background-color: var(--gray03);
-  }
+}
   
   a.liink:hover {
     background-color: var(--blue03);
-  }
+}
   
   a.liink .desc {
     color: var(--gray54);
-  }
+}
   
   a.liink:hover .title {
     color: var(--blue);
-  }
+}
   
   a.liink:hover .desc {
     color: var(--blue54);
-  }
+}
   
   abbr {
     font-size: .96em;
     letter-spacing: 1px;
-  }
+}
   
   i {
     font-family: var(--fontstack);
-  }
+}
   
   ol {
     padding-left: 1em;
-  }
+}
   
   ol li {
     padding: 0 0 1rem;
     list-style: disc;
-  }
+}
   
-  .btn {
+.btn {
     background-color: var(--blue03);
     padding: 1rem 1.5rem .8rem;
     border-radius: 10px;
@@ -159,13 +163,21 @@
     transition: background-color .04s, color .07s;
     cursor: pointer;
     user-select: none;
-  }
+}
+
+.btn.close i {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: -4px;
+}
   
-  .btn svg {
+.btn svg {
     transition: fill .07s;
-  }
+}
   
-  .btn .hotkey {
+.btn .hotkey {
     display: inline-block;
     padding: 0 4px;
     border: solid 1px var(--gray12);
@@ -173,52 +185,52 @@
     border-radius: 4px;
     color: var(--gray54);
     font-size: .8em;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     background-color: var(--blue12);
     color: var(--blue);
-  }
+}
   
-  .btn svg .fill-primary {
+.btn svg .fill-primary {
     fill: var(--blue);
-  }
+}
   
-  .btn svg .fill-secondary {
+.btn svg .fill-secondary {
     fill: var(--blue38);
-  }
+}
   
-  .btn:active, .btn.active {
+.btn:active, .btn.active {
     background-color: var(--blue);
     color: var(--white);
-  }
+}
   
-  .btn:active svg .fill-primary, .btn.active svg .fill-primary {
+.btn:active svg .fill-primary, .btn.active svg .fill-primary {
     fill: var(--white87);
-  }
+}
   
-  .btn:active svg .fill-secondary, .btn.active svg .fill-secondary {
+.btn:active svg .fill-secondary, .btn.active svg .fill-secondary {
     fill: var(--white38);
-  }
+}
   
-  .btns {
+.btns {
     padding: 2rem 0;
-  }
+}
   
-  .switch {
+.switch {
     position: relative;
     display: inline-block;
     width: 3rem;
     height: 1.5rem;
-  }
+}
   
-  .switch input { 
+.switch input { 
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
   
-  .slider {
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -228,9 +240,9 @@
     /* background-color: var(--blue12); */
     transition: .4s;
     border-radius: 12px;
-  }
+}
   
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 18px;
@@ -241,68 +253,78 @@
     transition: .5s;
     border-radius: 50%;
     box-shadow: 0 1px 3px var(--white);
-  }
+}
   
   input:checked + .slider {
     /* background-color: var(--blue54); */
-  }
+}
   
   input:focus + .slider {
-  }
+}
   
   input:checked + .slider:before {
     transform: translateX(22px);
     /* background-color: var(--blue); */
-  }
+}
   
   svg .fill-primary {
     fill: var(--gray87);
-  }
+}
   
   svg .fill-secondary {
     fill: var(--gray38);
-  }
+}
   
-  .page {
+.page {
     position: relative;
     margin: 0 auto;
     max-width: 576px;
     padding: 4rem 0;
-  }
+}
   
-  nav {
+nav {
     display: grid;
     column-gap: 32px;
     padding: 0 0 2rem;
     grid-template-columns: auto auto;
-  }
+}
   
-  nav .pic {
+nav .pic {
     margin-bottom: 0;
-  }
+}
   
-  nav .next {
+nav .next {
     text-align: right;
-  }
+}
   
-  header {
+header {
     padding: 3rem 0 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+}
   
-  header p {
+header p {
     color: var(--gray54);
-  }
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
   
-  .pic, .pic::after {
+.toolbar .btn {
+    margin-bottom: 0;
+}
+
+.pic, .pic::after {
     width: 96px;
     height: 96px;
     border-radius: 50%;
-  }
+}
   
-  .pic {
+.pic {
     overflow: hidden;
     transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     transition-property: background, color;
@@ -310,67 +332,119 @@
     position: relative;
     margin-bottom: 64px;
     display: inline-block;
-  }
+}
   
-  .pic::after {
+.pic::after {
     content: '\2190';
     left: 0;
     top: 0;
     opacity: 0;
     position: absolute;
     display: block;
-  }
+}
   
-  .pic.home::after {
+.pic.home::after {
     content: '';
-  }
+}
   
-  .pic::after {
+.pic::after {
     color: var(--white);
     text-align: center;
     line-height: 96px;
     font-weight: 500;
     font-size: calc(var(--reading)*1.5625);
     cursor: pointer;
-  }
+}
   
-  .pic:hover {
+.pic:hover {
     background: var(--blue);
-  }
+}
   
-  .pic:hover::after {
+.pic:hover::after {
     opacity: 1;
-  }
+}
   
-  .pic img {
+.pic img {
     transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     transition-property: opacity;
     transition-duration: .2s;
     display: block;
     border-radius: 50%;
     width: 100%;
-  }
+}
   
-  .pic:hover img {
+.pic:hover img {
     opacity: 0;
-  }
+}
   
-  footer ul {
+footer ul {
     margin-bottom: 4rem;
-  }
-  
-  footer ul li {
+}
+
+footer ul li {
     padding: 0 0 1rem;
-  }
-  
+}
+
+.overlay {
+    background-color: var(--gray54);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.drawer {
+    width: 100%;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: .5rem .5rem 0 0;
+    height: 100%;
+    margin-top: 2rem;
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.drawer.open {
+    transform: translate3d(0, 2rem, 0);
+}
+
+body.drawer-open {
+    margin: .5rem .5rem 0 .5rem;
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+}
+
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+body.drawer-open .overlay {
+    visibility: visible;
+    opacity: 1;
+    background-color: var(--gray54);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+
   img.blend {
     mix-blend-mode: darken;
-  }
+}
   
   figure {
     padding: 3em 0;
     text-align: center;
-  }
+}
   
   figure figcaption {
     color: var(--gray38);
@@ -378,23 +452,23 @@
     border-radius: 4px;
     max-width: 448px;
     margin: 0 auto;
-  }
+}
   
   figure img {
     display: inline-block;
     border-radius: 4px;
     max-height: 100vh;
     border: 1px solid rgba(var(--eigengrau), 0.03);
-  }
+}
   
   figure.research img {
     max-width: 640px;
-  }
+}
   
   figure.screen img, figure.research img {
     border: none;
-  }
+}
   
-  .hidden {
+.hidden {
     display: none !important;
-  }
+}

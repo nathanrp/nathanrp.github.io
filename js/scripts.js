@@ -27,3 +27,30 @@ window.onload = function() {
     body.classList.remove('dark');
   }
 };
+
+const passwordDrawer = document.getElementById('password-drawer');
+const openPasswordDrawer = document.getElementById('open-password-drawer');
+
+openPasswordDrawer.addEventListener('click', function(){
+  body.classList.add('drawer-open');
+  passwordDrawer.classList.add('open');
+});
+
+const closePasswordDrawers = document.querySelectorAll('.close-password-drawer');
+
+closePasswordDrawers.forEach(element => {
+  element.addEventListener('click', function() {
+    body.classList.remove('drawer-open');
+    passwordDrawer.classList.remove('open');
+  });
+});
+
+document.onkeydown = function (e) {
+  e = e || window.event;
+  if (e.repeat) { return }
+  // spacebar
+  if(e.keyCode == '27'){
+    body.classList.remove('drawer-open');
+    passwordDrawer.classList.remove('open');
+  }
+};

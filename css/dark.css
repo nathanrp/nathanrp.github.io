@@ -1,104 +1,111 @@
 .dark {
     background: var(--black);
     color: var(--white87);
-  }
+}
   
-  .dark h1 {
+.dark h1 {
     color: var(--white);
-  }
+}
   
-  .dark h1 span {
+.dark h1 span {
     color: var(--white54);
-  }
+}
   
-  .dark i.emoji {
+.dark i.emoji {
     color: var(--white);
-  }
+}
   
-  .dark a {
+.dark a {
     color: var(--teal);
     text-decoration-color: var(--teal12);
-  }
+}
   
-  .dark a.liink.pre {
+.dark a.liink.pre {
     background-color: var(--white03);
-  }
+}
   
-  .dark a.liink:hover {
+.dark a.liink:hover {
     background-color: var(--teal03);
-  }
+}
   
-  .dark a.liink .desc {
+.dark a.liink .desc {
     color: var(--teal54);
-  }
+}
   
-  .dark a.liink:hover .title {
+.dark a.liink:hover .title {
     color: var(--teal);
-  }
+}
   
-  .dark a.liink:hover .desc {
+.dark a.liink:hover .desc {
     color: var(--teal54);
-  }
+}
   
-  .dark .btn {
+.dark .btn {
     background-color: var(--teal03);
     color: var(--teal);
-  }
+}
   
-  .dark .btn .hotkey {
+.dark .btn .hotkey {
     border: solid 1px var(--white12);
     color: var(--white38);
-  }
+}
   
-  .dark .btn:active .hotkey, .dark .btn.btn.active .hotkey {
+.dark .btn:active .hotkey, .dark .btn.btn.active .hotkey {
     border: solid 1px var(--gray12);
     color: var(--gray38);
-  }
+}
   
-  .dark .btn:hover {
+.dark .btn:hover {
     background-color: var(--teal12);
     color: var(--teal);
-  }
+}
   
-  .dark .btn svg .fill-primary {
+.dark .btn svg .fill-primary {
     fill: var(--teal87);
-  }
+}
   
-  .dark .btn svg .fill-secondary {
+.dark .btn svg .fill-secondary {
     fill: var(--teal38);
-  }
+}
   
-  .dark .btn:active, .dark .btn.active {
+.dark .btn:active, .dark .btn.active {
     background-color: var(--teal);
     color: var(--gray87);
-  }
+}
   
-  .dark .btn:active svg .fill-primary, .dark .btn.active svg .fill-primary {
+.dark .btn:active svg .fill-primary, .dark .btn.active svg .fill-primary {
     fill: var(--gray87);
-  }
+}
   
-  .dark .btn:active svg .fill-secondary, .dark .btn.active svg .fill-secondary {
+.dark .btn:active svg .fill-secondary, .dark .btn.active svg .fill-secondary {
     fill: var(--gray38);
-  }
+}
   
-  .dark .slider {
+.dark .slider {
     /* background-color: var(--teal12); */
-  }
+}
   
-  .dark .slider:before {
+.dark .slider:before {
     background-color: var(--teal);
     clip-path: path("M11.0905 0.223846C8.95405 2.04231 7.93008 4.9907 8.7045 7.88088C9.77298 11.8685 13.8616 14.2403 17.8499 13.1948C16.7347 15.3999 14.7213 17.1391 12.1465 17.829C7.34535 19.1155 2.41032 16.2662 1.12384 11.465C-0.162634 6.66383 2.68661 1.7288 7.4878 0.442324C8.70047 0.117393 9.92167 0.0562952 11.0905 0.223846Z");
     box-shadow: 0 1px 3px var(--gray87);
-  }
-
+}
   
-  .dark input:checked + .slider {
+.dark input:checked + .slider {
     /* background-color: var(--teal54); */
-  }
+}
   
-  .dark input:focus + .slider {
-  }
+.dark input:focus + .slider {
+}
   
-  .dark input:checked + .slider:before {
+.dark input:checked + .slider:before {
     /* background-color: var(--teal); */
-  }
+}
+
+body.dark.drawer-open .overlay {
+  background-color: var(--gray87);
+}
+
+.dark .drawer {
+  background-color: var(--black);
+}
