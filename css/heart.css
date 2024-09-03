@@ -5,6 +5,9 @@
     flex-direction: row;
     gap: 2rem;
     user-select: none;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--gray01);
 }
 
 .heart {

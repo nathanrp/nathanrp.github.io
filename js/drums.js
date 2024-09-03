@@ -57,6 +57,9 @@ document.onkeydown = function (e) {
         shock();
         defibullator.classList.add('active');
         e.preventDefault();
+    } else if(e.keyCode == '27'){
+        body.classList.remove('drawer-open');
+        passwordDrawer.classList.remove('open');
     }
 };
 

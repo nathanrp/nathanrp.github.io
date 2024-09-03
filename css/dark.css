@@ -3,14 +3,6 @@
     color: var(--white87);
 }
   
-.dark h1 {
-    color: var(--white);
-}
-  
-.dark h1 span {
-    color: var(--white54);
-}
-  
 .dark i.emoji {
     color: var(--white);
 }
@@ -108,4 +100,12 @@ body.dark.drawer-open .overlay {
 
 .dark .drawer {
   background-color: var(--black);
+}
+
+.dark header .desc {
+    color: var(--white54);
+}
+
+.dark .heart-machine {
+    background-color: var(--black);
 }
