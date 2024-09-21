@@ -45,3 +45,12 @@ closePasswordDrawers.forEach(element => {
   });
 });
 
+document.onkeydown = function (e) {
+  e = e || window.event;
+  if (e.repeat) { return }
+  // spacebar
+  if(e.keyCode == '27'){
+    body.classList.remove('drawer-open');
+    passwordDrawer.classList.remove('open');
+  }
+};

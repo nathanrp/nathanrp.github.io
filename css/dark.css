@@ -73,27 +73,11 @@
     fill: var(--gray38);
 }
   
-.dark .slider {
-    /* background-color: var(--teal12); */
-}
-  
-.dark .slider:before {
+.dark .appearance-switch .slider:before {
     background-color: var(--teal);
     clip-path: path("M11.0905 0.223846C8.95405 2.04231 7.93008 4.9907 8.7045 7.88088C9.77298 11.8685 13.8616 14.2403 17.8499 13.1948C16.7347 15.3999 14.7213 17.1391 12.1465 17.829C7.34535 19.1155 2.41032 16.2662 1.12384 11.465C-0.162634 6.66383 2.68661 1.7288 7.4878 0.442324C8.70047 0.117393 9.92167 0.0562952 11.0905 0.223846Z");
-    box-shadow: 0 1px 3px var(--gray87);
 }
   
-.dark input:checked + .slider {
-    /* background-color: var(--teal54); */
-}
-  
-.dark input:focus + .slider {
-}
-  
-.dark input:checked + .slider:before {
-    /* background-color: var(--teal); */
-}
-
 body.dark.drawer-open .overlay {
   background-color: var(--gray87);
 }

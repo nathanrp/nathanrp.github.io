@@ -32,12 +32,17 @@
     --reading: inherit;
     --body: inherit;
     --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --displaystack: 'Calistoga', cursive;
+    --serifstack: 'Clearface', serif;
     --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+}
+
+@font-face {
+  font-family: "Clearface";
+  src: url("https://github.com/teaguemiller/mxw/raw/master/Fonts/ITC%20Clearface%20Std/ClearfaceStd-Regular.otf") format("opentype");
+  font-weight: 400;
 }
   
 html {
-    background-color: var(--black);
 }
 
 html, body {
@@ -52,7 +57,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     font-variant-ligatures: common-ligatures;
     line-height: 1.5;
-    background-color: var(--white100);
+    background-color: var(--gray01);
     transition: background-color .1s, margin 0.3s cubic-bezier(0.32, 0.72, 0, 1), border-radius 0.3s cubic-bezier(0.32, 0.72, 0, 1);
 }
   
@@ -87,7 +92,7 @@ html, body {
     color: var(--gray54);
 }
   
-  a {
+  a, a.unlink:hover {
     color: var(--blue);
     /* display: inline-block; */
     text-decoration-thickness: 2px;
@@ -99,6 +104,11 @@ html, body {
     margin: 0 0 0 4px;
     text-decoration: none;
     display: inline-block;
+}
+
+a.unlink {
+  color: var(--gray38);
+  text-decoration-color: transparent;
 }
   
   a.liink {
@@ -213,71 +223,13 @@ html, body {
     fill: var(--white38);
 }
   
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 3rem;
-    height: 1.5rem;
-}
-  
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background-color: var(--blue12); */
-    transition: .4s;
-    border-radius: 12px;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 3px;
-    background-color: var(--yellow);
-    transition: .5s;
-    border-radius: 50%;
-    box-shadow: 0 1px 3px var(--white);
-}
-  
-  input:checked + .slider {
-    /* background-color: var(--blue54); */
-}
-  
-  input:focus + .slider {
-}
-  
-  input:checked + .slider:before {
-    transform: translateX(22px);
-    /* background-color: var(--blue); */
-}
-  
-  svg .fill-primary {
-    fill: var(--gray87);
-}
-  
-  svg .fill-secondary {
-    fill: var(--gray38);
-}
-  
 .page {
     position: relative;
     margin: 0 auto;
-    max-width: 640px;
+    max-width: 700px;
     padding: 2rem 0;
 }
-  
+
 nav {
     display: flex;
     flex-direction: row;
@@ -310,12 +262,22 @@ header {
 header a {
   text-decoration: none;
   color: var(--gray87);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.5rem;
 }
   
 header div {
     color: var(--gray54);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.row [class^="col"] {
+  flex: 1 1 auto;
 }
 
 section {

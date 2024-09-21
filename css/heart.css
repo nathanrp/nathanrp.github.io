@@ -5,15 +5,17 @@
     flex-direction: row;
     gap: 2rem;
     user-select: none;
-    padding: 2rem;
     border-radius: 8px;
-    background-color: var(--gray01);
 }
 
-.heart {
-    width: 100px;
+.col-heart {
+    max-width: 142px;
     cursor: grab;
     /* clip-path: path("M0.00292969 80.3685V0.598636L100.003 0.598633V112.982H76.9171C74.3955 112.982 69.8567 108.129 64.1412 108.129C34.2188 108.129 28.5033 94.3446 23.1407 83.6739C20.0422 82.8039 18.571 81.8056 17.191 80.3685H0.00292969Z"); */
+}
+
+.col-center {
+    align-content: center;
 }
 
 .heart:active {

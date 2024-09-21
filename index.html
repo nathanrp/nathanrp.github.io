@@ -31,8 +31,8 @@
 <body>
 	<div class="page">
 		<div class="toolbar">
-			<label class="switch">
-				<input type="checkbox" id="appearance">
+			<label class="switch appearance-switch">
+				<input type="checkbox" id="appearance" />
 				<span class="slider"></span>
 			</label>
 		</div>
@@ -40,31 +40,35 @@
 			<a href="">Nathan Philpot</a>
 			<div class="desc">Product Design</div>
 		</header>
-		<div class="heart-machine">
-			<img src="img/heart.gif" alt="heart" class="heart defibullator" />
-			<a class="defibullator btn" id="defibullator">You&rsquo;re visits pump me up! <span class="hotkey">spacebar</span></a>
-		</div>
-		<script src="js/howler.core.min.js"></script>
-		<script src="js/drums.js"></script>
 
 		<section>
 			<h2>About me</h2>
 			<p>With 20+ years of experience as a designer, I&rsquo;ve worked in Fintech, SaaS, Education, Security, B2B, and other industries and organizations, including <a href="https://www.housecallpro.com/" rel="external" target="_blank">Housecall Pro</a>, <a href="https://circleci.com/" rel="external" target="_blank">CircleCI</a>, <a href="https://www.mavenlink.com/" rel="external" target="_blank">Mavenlink</a> (now Kantata), <a href="https://www.hrblock.com/" rel="external" target="_blank"><abbr>H&amp;B</abbr> Block</a>, <a href="https://www.tcs.com/" rel="external" target="_blank"><abbr>TCS</abbr></a>, <a href="https://www.wgu.edu/" rel="external" target="_blank"><abbr>WGU</abbr></a>, and <a href="https://www.churchofjesuschrist.org/" rel="external" target="_blank">The Church of Jesus Christ of Latter-day Saints</a>. Throughout my career, I&rsquo;ve taken on roles ranging from individual contributor to lead and management, driving projects from concept to completion (0&ndash;1). I enjoy human-centered design and working with others to create better products and experiences that are good for people and the business, resulting in better engagement and retention.</p>
+		</section>
+		<section>
+			<div class="row">
+			<div class="col-heart">
+				<div class="heart">
+					<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+					<dotlottie-player src="https://lottie.host/86b1752e-3fce-4901-b87d-96ba31f3cdb7/hK4kAobLWz.json" background="transparent" speed="1" direction="1" playMode="bounce" loop autoplay></dotlottie-player>
+				</div>
+			</div>
+			<div class="col-center" id="open-password-drawer">Your visits pump me up!</div>
+		</div>
 		</section>
 		<footer>
 			<h2>Find me on the www</h2>
 			<ul>
 				<li><a href="mailto:nathanphilpot@gmail.com" target="_blank">Email me</a></li>
 				<li><a href="https://www.linkedin.com/in/nathanphilpot/" target="_blank">LinkedIn<i>&nearr;</i></a></li>
-				<li><a href="https://twitter.com/nathanphilpot" target="_blank">Twitter<i>&nearr;</i></a></li>
+				<li><a href="https://x.com/nathanphilpot" target="_blank"><span style="font-weight: bold;">&#x1D54F;</span><i>&nearr;</i></a></li>
 				<li><a href="https://dribbble.com/nathanphilpot" target="_blank">Dribbble<i>&nearr;</i></a></li>
 				<li><a href="https://github.com/nathanrp" target="_blank">Github<i>&nearr;</i></a></li>
 				<li><i class="emoji">&#x1F44D;</i></li>
 			</ul>
-
-			<p>You are probably here looking for a product designer. I want your feedback. Is this website working?</p>
-			<a class="btn" rel="external" target="_blank" href="https://forms.gle/6DT7bmUbpwPyiETB9">Let me know</a>
 		</footer>
+		<script src="js/howler.core.min.js"></script>
+		<script src="js/drums.js"></script>
 	</div>
 	<div class="overlay close-password-drawer" id="overlay"></div>
 	<div class="drawer" id="password-drawer">
