@@ -1,56 +1,27 @@
-function darkMode() {
-    var element = document.body;
-    element.classList.toggle('dark');
-}
+$(document).ready(function(){
 
-const checkbox = document.getElementById('appearance');
-const body = document.body;
-
-  checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-      body.classList.add('dark');
-      window.history.replaceState({}, '', '?appearance=dark');
-    } else {
-      body.classList.remove('dark');
-      window.history.replaceState({}, '', '?appearance=lite');
-    }
+  $('.link-preview').miniPreview({
+    width: 200,
+    height: 114
   });
 
-const url = new URL(window.location.href);
-const params = new URLSearchParams(url.search);
+  $('.link-preview').hover(
+    function(){
+      var x = Math.ceil(Math.random() * 7) * (Math.round(Math.random()) ? 1 : -1)
+      $(this).find('.mini-preview-wrapper').css(
+        'transform', 'rotate('+x+'deg)'
+      )
+    }, function(){
+      $(this).find('.mini-preview-wrapper').css(
+        'transform','rotate(-3deg) scale(.1)'
+      )
+    });
 
-window.onload = function() {
-  if (params.has('appearance','dark')) {
-    body.classList.add('dark');
-    checkbox.checked = true
-  } else {
-    body.classList.remove('dark');
-  }
-};
-
-const passwordDrawer = document.getElementById('password-drawer');
-const openPasswordDrawer = document.getElementById('open-password-drawer');
-
-openPasswordDrawer.addEventListener('click', function(){
-  body.classList.add('drawer-open');
-  passwordDrawer.classList.add('open');
-});
-
-const closePasswordDrawers = document.querySelectorAll('.close-password-drawer');
-
-closePasswordDrawers.forEach(element => {
-  element.addEventListener('click', function() {
-    body.classList.remove('drawer-open');
-    passwordDrawer.classList.remove('open');
+  $('.link-preview').on('mousemove',function(e){
+    $('.mini-preview-wrapper').css({
+      left: e.clientX + 16,
+      top: e.clientY + 16
+    });
   });
-});
 
-document.onkeydown = function (e) {
-  e = e || window.event;
-  if (e.repeat) { return }
-  // spacebar
-  if(e.keyCode == '27'){
-    body.classList.remove('drawer-open');
-    passwordDrawer.classList.remove('open');
-  }
-};
+});
