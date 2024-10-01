@@ -3,7 +3,7 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 3rem;
+    width: 1.5rem;
     height: 1.5rem;
 }
   
@@ -47,7 +47,7 @@
 }
   
 input:checked + .slider:before {
-    transform: translateX(22px);
+    transform: translateX(0px);
     font-family: var(--fontstack);
 }
   

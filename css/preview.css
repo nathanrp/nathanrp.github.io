@@ -27,6 +27,10 @@
     display: inline;
 }
 
+.alt-preview {
+    cursor: alias;
+}
+
 .mini-preview-wrapper {
     position: fixed;
     overflow: hidden;
@@ -54,7 +58,9 @@
 }
 
 .mini-preview-loading {
-    display: table;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -62,12 +68,15 @@
     background-color: var(--teal);
 }
 
-.mini-preview-loading::before {
+.mini-preview-anchor:not(.alt-preview) .mini-preview-loading::before {
     content: 'Loading...';
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
 }
+
+.alt-preview .mini-preview-wrapper {
+    width: 220px;
+    height: 100px;
+}
+
 
 .mini-preview-frame {
     border: none;

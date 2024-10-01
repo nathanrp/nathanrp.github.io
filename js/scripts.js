@@ -1,11 +1,14 @@
 $(document).ready(function(){
 
   $('.link-preview').miniPreview({
+    prefetch: 'none',
     width: 200,
     height: 114
   });
 
-  $('.link-preview').hover(
+ 
+
+  $('.link-preview, .alt-preview').hover(
     function(){
       var x = Math.ceil(Math.random() * 7) * (Math.round(Math.random()) ? 1 : -1)
       $(this).find('.mini-preview-wrapper').css(
@@ -17,7 +20,7 @@ $(document).ready(function(){
       )
     });
 
-  $('.link-preview').on('mousemove',function(e){
+  $('.link-preview, .alt-preview').on('mousemove',function(e){
     $('.mini-preview-wrapper').css({
       left: e.clientX + 16,
       top: e.clientY + 16
