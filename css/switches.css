@@ -36,7 +36,7 @@
 }
 
 .appearance-switch .slider::before {
-    background-color: var(--yellow);
+    background-color: var(--pangea);
 }
 
 .font-switch .slider:before {
