@@ -59,7 +59,7 @@
     width: 100%;
     text-align: center;
     color: var(--white);
-    background-color: var(--blue);
+    background-color: var(--teal);
 }
 
 .mini-preview-loading::before {

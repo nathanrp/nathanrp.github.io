@@ -1,4 +1,11 @@
 :root {
+    --iron: rgb(102,93,89);
+    --ironore: rgba(71,71,69);
+    --pangeaRGB: 255,182,125;
+    --pangea: rgba(var(--pangeaRGB));
+    --pangea12: rgba(var(--pangeaRGB), 0.12);
+  
+
     --eigengrau: 22,22,29;
     --whiter: 255,255,255;
     --black: rgba(var(--eigengrau));
@@ -35,12 +42,6 @@
     --serifstack: 'Clearface', serif;
     --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
 }
-
-@font-face {
-  font-family: "Clearface";
-  src: url("https://github.com/teaguemiller/mxw/raw/master/Fonts/ITC%20Clearface%20Std/ClearfaceStd-Regular.otf") format("opentype");
-  font-weight: 400;
-}
   
 html {
 }
@@ -53,57 +54,53 @@ html, body {
     font-family: var(--fontstack);
     font-size: var(--body);
     text-rendering: optimizeLegibility;
-    color: var(--black);
+    color: var(--iron);
     -webkit-font-smoothing: antialiased;
     font-variant-ligatures: common-ligatures;
     line-height: 1.5;
-    background-color: var(--gray01);
+    background-color: var(--white);
     transition: background-color .1s, margin 0.3s cubic-bezier(0.32, 0.72, 0, 1), border-radius 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    
 }
   
-  body * {
-    transition: background-color .1s, color .1s;
+body * {
+  transition: background-color .1s, color .1s;
 }
   
-  h1, h2 {
-    margin-bottom: 2em;
-    font-weight: 500;
+h1, h2 {
+  margin-bottom: 2em;
+  font-weight: 500;
+  color: var(--ironore);
 }
   
-  h1 span {
-    color: var(--gray54);
+h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
   
-  h3 {
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-  
-  h5 {
-    margin-bottom: 1rem;
+ h5 {
+  margin-bottom: 1rem;
 }
   
   p, ol {
     margin-bottom: 2rem;
 }
   
-  code {
-    font-family: var(--codestack);
-    color: var(--gray54);
+code {
+  font-family: var(--codestack);
 }
   
-  a, a.unlink:hover {
-    color: var(--blue);
-    /* display: inline-block; */
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    text-decoration-color: var(--blue12);
+a, a.unlink:hover {
+  color: var(--pangea);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--pangea12);
 }
   
-  a i {
-    margin: 0 0 0 4px;
-    text-decoration: none;
-    display: inline-block;
+a i {
+  margin: 0 0 0 4px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 a.unlink {
@@ -111,52 +108,22 @@ a.unlink {
   text-decoration-color: transparent;
 }
   
-  a.liink {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    padding: 1rem;
-    border-radius: 10px;
-    margin: 0 -1rem 1rem;
+abbr {
+  font-size: .96em;
+  letter-spacing: 1px;
 }
   
-  a.liink.pre {
-    background-color: var(--gray03);
+i {
+  font-family: var(--fontstack);
 }
   
-  a.liink:hover {
-    background-color: var(--blue03);
+ol {
+  padding-left: 1em;
 }
   
-  a.liink .desc {
-    color: var(--gray54);
-}
-  
-  a.liink:hover .title {
-    color: var(--blue);
-}
-  
-  a.liink:hover .desc {
-    color: var(--blue54);
-}
-  
-  abbr {
-    font-size: .96em;
-    letter-spacing: 1px;
-}
-  
-  i {
-    font-family: var(--fontstack);
-}
-  
-  ol {
-    padding-left: 1em;
-}
-  
-  ol li {
-    padding: 0 0 1rem;
-    list-style: disc;
+ol li {
+  padding: 0 0 1rem;
+  list-style: disc;
 }
   
 .btn {
@@ -261,13 +228,13 @@ header {
 
 header a {
   text-decoration: none;
-  color: var(--gray87);
+  color: var(--ironore);
   font-weight: 600;
   font-size: 1.5rem;
 }
   
 header div {
-    color: var(--gray54);
+    color: var(--tan);
 }
 
 .row {
