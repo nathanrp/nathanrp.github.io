@@ -1,6 +1,13 @@
 .dark {
-    background: var(--black);
     color: var(--white87);
+}
+
+.dark .page-wrapper {
+  background-color: var(--black);
+}
+
+.dark.drawer-open .page-wrapper {
+  background: #000;
 }
   
 .dark i.emoji {
@@ -10,6 +17,24 @@
 .dark a {
     color: var(--teal);
     text-decoration-color: var(--teal12);
+}
+
+.dark .btn.close {
+  color: var(--pangea);
+}
+
+.dark .btn.close .hotkey {
+  border-color: var(--white12);
+  color: var(--white54);
+}
+
+.dark .btn.close:active {
+  color: var(--ironore);
+}
+
+.dark .btn.close:active .hotkey {
+  border-color: var(--gray12);
+  color: var(--gray54);
 }
   
 .dark .appearance-switch .slider:before {
@@ -23,4 +48,15 @@ body.dark.drawer-open .overlay {
 
 .dark .drawer {
   background-color: var(--black);
+}
+
+.dark input[type=text] {
+  box-shadow: 0 0 0 1px inset var(--white12);
+  background-color: var(--white12);
+  color: var(--white87);
+}
+
+.dark input[type=text]:focus {
+  box-shadow: 0 0 0 2px var(--teal);
+  outline: none;
 }

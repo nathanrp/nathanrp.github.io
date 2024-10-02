@@ -43,6 +43,16 @@
     transform-origin: 0 0;
 }
 
+.multi-preview .mini-preview-wrapper:nth-child(3) {
+}
+
+.multi-preview .mini-preview-wrapper:nth-child(2) {
+    transition-delay: .1s;
+}
+.multi-preview .mini-preview-wrapper:nth-child(1) {
+    transition-delay: .15s;
+}
+
 .mini-preview-anchor:hover .mini-preview-wrapper {
     z-index: 2;
     opacity: 1;
@@ -68,7 +78,7 @@
     background-color: var(--teal);
 }
 
-.mini-preview-anchor:not(.alt-preview) .mini-preview-loading::before {
+.mini-preview-anchor:not(.alt-preview,.multi-preview) .mini-preview-loading::before {
     content: 'Loading...';
 }
 
@@ -77,6 +87,10 @@
     height: 100px;
 }
 
+.multi-preview .mini-preview-wrapper {
+    width: 220px;
+    height: 120px;
+}
 
 .mini-preview-frame {
     border: none;

@@ -1,0 +1,55 @@
+.overlay {
+    background-color: var(--gray54);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.drawer {
+    width: 100%;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: .5rem .5rem 0 0;
+    height: 100%;
+    margin-top: 2rem;
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.drawer.open {
+    transform: translate3d(0, 2rem, 0);
+}
+
+body.drawer-open {
+    overflow: hidden;
+}
+
+body.drawer-open .page-wrapper {
+    transform: scale(.966666666666);
+    border-radius: .5rem .5rem 0 0;
+}
+
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+body.drawer-open .overlay {
+    visibility: visible;
+    opacity: 1;
+    background-color: var(--gray54);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}

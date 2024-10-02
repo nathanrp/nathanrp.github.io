@@ -26,6 +26,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://lonekorean.github.io/mini-preview/jquery.minipreview.js"></script>
@@ -33,7 +34,8 @@
 
 </head>
 <body>
-	<div class="page">
+	<div class="page-wrapper">
+		<div class="page">
 		<div class="toolbar">
 			<label class="switch appearance-switch">
 				<input type="checkbox" id="appearance" />
@@ -42,12 +44,25 @@
 		</div>
 		<header>
 			<a href="">Nathan Philpot</a>
-			<div class="desc">Product Design</div>
+			<div class="desc">Product Design.</div>
 		</header>
-
 		<section>
 			<h2>About me</h2>
 			<p>With 20+ years of experience as a designer, I&rsquo;ve worked in Fintech, SaaS, Education, Security, B2B, and other industries and organizations, including <a href="https://www.housecallpro.com/" rel="external" target="_blank" class="link-preview">Housecall Pro</a>, <a href="https://circleci.com/" rel="external" target="_blank" class="link-preview">CircleCI</a>, <a href="https://www.mavenlink.com/" rel="external" target="_blank" class="link-preview">Mavenlink</a> (now Kantata), <a href="https://www.hrblock.com/" rel="external" target="_blank" class="link-preview"><abbr>H&amp;B</abbr> Block</a>, <a href="https://www.tcs.com/" rel="external" target="_blank" class="link-preview"><abbr>TCS</abbr></a>, <a href="https://www.wgu.edu/" rel="external" target="_blank" class="link-preview"><abbr>WGU</abbr></a>, and <a href="https://www.churchofjesuschrist.org/" rel="external" target="_blank" class="link-preview">The Church of Jesus Christ of Latter-day Saints</a>. Throughout my career, I&rsquo;ve taken on roles ranging from individual contributor to lead and management, driving projects from concept to completion (0&ndash;1). I enjoy human-centered design and working with others to create better products and experiences that are good for people and the business.</p>
+		</section>
+		<section>
+			Check out some of my <a class="multi-preview mini-preview-anchor open-drawer">
+				past work&hellip;
+				<div class="mini-preview-wrapper">
+					<div class="mini-preview-loading">&hellip;</div>
+				</div>
+				<div class="mini-preview-wrapper">
+					<div class="mini-preview-loading">soon</div>
+				</div>
+				<div class="mini-preview-wrapper">
+					<div class="mini-preview-loading">coming soon&hellip;</div>
+				</div>
+			</a>
 		</section>
 		<footer>
 			<h2>Find me on the www</h2>
@@ -64,16 +79,25 @@
 				<li><a href="https://github.com/nathanrp" target="_blank" class="link-preview">Github<i>&nearr;</i></a></li>
 				<li><i class="emoji">&#x1F44D;</i></li>
 			</ul>
+			<p class="whispers">good design is honest<br/>design is craft<br/>design is vibe</p>
 		</footer>
 		<script src="js/howler.core.min.js"></script>
 		<script src="js/drums.js"></script>
 	</div>
-	<div class="overlay close-password-drawer" id="overlay"></div>
-	<div class="drawer" id="password-drawer">
+	</div>
+	<div class="overlay"></div>
+	<div class="drawer">
 		<div class="toolbar">
-			<a class="close btn close-password-drawer"><i class="icon">&times;</i> <span class="hotkey">esc</span></a>
+			<a class="close btn close-drawer"><i class="icon">&times;</i> <span class="hotkey">esc</span></a>
 		</div>
-		hello
+		<form class="page password-form">
+			<p>What&rsquo;s the deal with passwords? You type them in, and boom&ndash;access granted. But you can&rsquo;t just tell people, &lsquo;Here&rsquo;s my work, come on in!&rsquo; No, no, no. You need a password to prove you&rsquo;re serious. So, go ahead, enter the password. It&rsquo;s like I&rsquo;m letting you into my secret design lair. And don&rsquo;t worry, it&rsquo;s not <i class="ital">password</i>, because who&rsquo;s still using that? Oh right&hellip; everyone. <i class="ital">&mdash;<a href="https://chatgpt.com/" target="_blank">ChatGPT</a> Jerry Seinfeld</i></p>
+			<fieldset>
+				<label class="hidden">Password</label>
+				<input type="text" placeholder="Password" id="password" />
+			</fieldset>
+			<button type="submit" class="btn">Submit <span class="hotkey">&#8618; enter</span></button>
+		</form>
 	</div>
 </body>
 </html>
