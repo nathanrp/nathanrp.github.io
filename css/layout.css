@@ -306,6 +306,10 @@ header div {
     color: var(--tan);
 }
 
+.blackbird {
+  width: 36px;
+}
+
 .toolbar {
   display: flex;
   flex-direction: row;

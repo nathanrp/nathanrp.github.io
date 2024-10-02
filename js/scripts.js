@@ -72,7 +72,14 @@ $(document).ready(function(){
   $('.password-form').submit(function(event) {
     var guess = $('#password').val();
     var password = 'blackbird'
-    if (guess !== password) {
+    if (guess !== password && guess == 'password') {
+      event.preventDefault(); // Prevent form submission
+      $('.password-form fieldset').addClass('error');
+      if(!$('.password-form fieldset .error').length) {
+        $('<div class="error error">Oh, you tried <i class="ital">password</i> as the password? Really? Password? That&rsquo;s what you went with? That&rsquo;s like naming your dog <i class="ital">Dog</i>. I mean, come on! It&rsquo;s the most obvious choice! It&rsquo;s the first thing hackers try, but here you are, thinking, &lsquo;Maybe it&rsquo;ll work!&rsquo; No, it won&rsquo;t. Nobody uses <i class="ital">passowrd</i> as the password&hellip; except people who probably shouldn&rsquo;t be allowed near computers. <i class="ital">&mdash;<a href="https://chatgpt.com/" target="_blank">ChatGPT</a> Jerry Seinfeld</i></div>').insertAfter('#password');
+      }
+    }
+    else if (guess !== password) {
       event.preventDefault(); // Prevent form submission
       $('.password-form fieldset').addClass('error');
       if(!$('.password-form fieldset .error').length) {
