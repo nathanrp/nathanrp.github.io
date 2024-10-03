@@ -122,6 +122,9 @@ a i {
   margin: 0 0 0 4px;
   text-decoration: none;
   display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
 }
   
 abbr {
@@ -262,6 +265,7 @@ fieldset.error .error {
   background: var(--white);
   transition: transform 0.5s ease-out, border-radius .5s ease-out;
   box-shadow: 0 0 32px var(--gray12);
+  min-height: 100vh;
 }
   
 .page {
