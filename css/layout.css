@@ -6,6 +6,7 @@
     --pangea12: rgba(var(--pangeaRGB), 0.12);
     --tan: rgba(194, 187, 171, 1);
     --cyan: rgba(54, 206, 255, 1);
+    --moondust: rgba(213, 215, 207, 1);
 
     --eigengrau: 22,22,29;
     --whiter: 255,255,255;
@@ -85,6 +86,10 @@ h5 {
   
 p, ol {
   margin-bottom: 2rem;
+}
+
+.dust {
+  color: var(--moondust);
 }
 
 .whispers {
@@ -313,8 +318,9 @@ header div {
 .toolbar {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
   margin-bottom: 2rem;
+  align-items: center;
 }
 
 .row {
