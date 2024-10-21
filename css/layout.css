@@ -180,10 +180,6 @@ ol li {
     margin-top: -4px;
 }
   
-.btn svg {
-    transition: fill .07s;
-}
-  
 .btn .hotkey {
     display: inline-block;
     padding: 0 4px;
@@ -201,26 +197,10 @@ ol li {
 button[type=submit]:hover {
   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>") 6 6,auto; /*!emojicursor.app*/
 }
-
-.btn svg .fill-primary {
-    fill: var(--blue);
-}
-  
-.btn svg .fill-secondary {
-    fill: var(--blue38);
-}
   
 .btn:active {
     background-color: var(--pangea);
     color: var(--ironore);
-}
-  
-.btn:active svg .fill-primary, .btn.active svg .fill-primary {
-    fill: var(--white87);
-}
-  
-.btn:active svg .fill-secondary, .btn.active svg .fill-secondary {
-    fill: var(--white38);
 }
 
 input[type=text] {
@@ -339,6 +319,26 @@ header div {
 
 section {
   margin: 0 0 4rem;
+}
+
+.designs {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  width: 100%;
+  height: min-content;
+  flex-wrap: nowrap;
+  padding-left: calc(50vw - 350px);
+  padding-right: calc(50vw - 350px);
+  transform: translate(calc(350px - 50vw), 0);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; /* firefox */
+  box-sizing: content-box;
+  overflow-x: auto;
+}
+
+.designs::-webkit-scrollbar {
+  display: none;
 }
 
 .pic, .pic::after {

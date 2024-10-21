@@ -1,12 +1,14 @@
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
 
     .page {
         padding: 2rem;
     }
 
-    .heart-machine {
-        flex-direction: column;
+    .designs {
+        padding-left: 2em;
+        padding-right: 2em;
+        transform: translate(-2em, 0);
     }
 
     .btn .hotkey {
