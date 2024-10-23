@@ -100,4 +100,6 @@ $(document).ready(function(){
     $('body').toggleClass('dark');
   });
 
+  $('footer').load('../templates/footer.html');
+
 });
