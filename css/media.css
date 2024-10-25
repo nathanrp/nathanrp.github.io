@@ -11,6 +11,10 @@
         transform: translate(-2em, 0);
     }
 
+    img {
+        max-width: none;
+    }
+
     .btn .hotkey {
         display: none;
     }
