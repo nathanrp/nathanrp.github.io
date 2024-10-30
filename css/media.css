@@ -5,6 +5,10 @@
         padding: 2rem;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
     .designs {
         padding-left: 2em;
         padding-right: 2em;
@@ -27,4 +31,10 @@
         flex-direction: column;
     }
 
+}
+
+@media screen and (max-height: 500px) {
+    header {
+        height: auto;
+    }
 }

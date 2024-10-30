@@ -45,7 +45,7 @@
     --reading: inherit;
     --body: inherit;
     --fontstack: 'Inter', -apple-system, BlinkMacSystemFont, segoe ui, Ubuntu, roboto, arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --serifstack: 'Lora', serif;
+    --scarystack: 'Creepster', serif;
     --codestack: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
 }
   
@@ -76,6 +76,11 @@ h1, h2 {
   margin-bottom: 2em;
   font-weight: 500;
   color: var(--ironore);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
 }
   
 h3 {
@@ -120,11 +125,17 @@ em {
 }
 
 a {
-  color: var(--pangea);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  text-decoration-color: var(--pangea12);
+  color: var(--ironore);
+  text-decoration-thickness: .333em;
+  text-decoration-color: var(--teal12);
   cursor: pointer;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+}
+
+a:hover {
+  text-decoration-style: wavy;
+  text-decoration-color: var(--teal);
 }
   
 a i {
@@ -164,7 +175,7 @@ ol li:last-child {
 }
   
 .btn, input[type=submit], button {
-    background-color: var(--pangea);
+    background-color: var(--teal);
     padding: 1rem 1.5rem .8rem;
     border-radius: 4px;
     text-decoration: none;
@@ -182,7 +193,7 @@ ol li:last-child {
 }
 
 .btn.close {
-  background-color: var(--pangea12);
+  background-color: var(--teal12);
 }
 
 .btn.close i {
@@ -212,7 +223,7 @@ button[type=submit]:hover {
 }
   
 .btn:active {
-    background-color: var(--pangea);
+    background-color: var(--teal);
     color: var(--ironore);
 }
 
@@ -295,17 +306,16 @@ header {
     padding: 0 0 4rem;
     display: flex;
     flex-direction: column;
+    height: 90vh;
+    justify-content: center;
 }
 
-header a {
-  text-decoration: none;
-  color: var(--ironore);
-  font-weight: 600;
-  font-size: 1.5rem;
+header h1 .mmm:hover {
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤔</text></svg>") 6 6,auto; /*!emojicursor.app*/
 }
-  
-header div {
-    color: var(--tan);
+
+.me {
+  border-radius: 120px;
 }
 
 .blackbird {
