@@ -131,6 +131,7 @@ a {
   cursor: pointer;
   text-decoration-style: solid;
   text-decoration-line: underline;
+  text-underline-offset: .333em;
 }
 
 a:hover {
